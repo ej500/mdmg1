@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script type="text/javascript">
+        var password = prompt("Please enter the password to view this page:", "");
+        if (password != "12") {
+            window.location = "access_denied.html"; // Redirect to an access denied page or any other page
+        }
+    </script>
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="Reflist.html">Reflist</a>
         <a href="contact.html">Contact</a>
     </nav>
     <h1>Welcome to My Website</h1>
     <p>This is the home page of my first website, tester endring andre committ.ghfhfhfgfhgfhfhghfhfhfhfas</p>
+    <div class="links">
     <a href="Architecture_Design_Principals.html">Architecture Design Principles</a>
-
+    <a href="netlifydocuments/test.txt" target="_blank">Open My Text File</a>
+    </div>
 </body>
 </html>

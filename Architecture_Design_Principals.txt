@@ -1,0 +1,68 @@
+# Azure Architecture Design Principles
+## [Design for Self Healing](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/self-healing)
+- Anticipate and recover from failures in a distributed system.
+- Key Strategies:
+  - Detect, respond gracefully, and monitor failures.
+  - Handle local, short-lived failures like network or database issues.
+- Recommendations:
+  - Retry failed operations for transient failures.
+  - Use Circuit Breaker and Bulkhead patterns for service isolation.
+  - Implement load leveling and graceful degradation.
+  - Fail over to another instance or region if necessary.
+  - Compensate failed transactions and checkpoint long-running ones.
+  - Throttle clients and block bad actors as needed.
+  - Test with fault injection and embrace chaos engineering.
+  - Consider availability zones for latency reduction and high availability.
+- For more, visit [Design reliable applications for Azure](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/self-healing).
+
+## [Make All Things Redundant](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/redundancy)
+- Implement redundancy to prevent failures- Build redundancy to avoid single points of failure.
+- Recommendations:
+  - Tailor redundancy to business requirements like RTO and RPO.
+  - Use multi-zone and multi-region architectures for resiliency.
+  - Place VMs behind a load balancer for availability.
+  - Replicate databases and consider partitioning for availability.
+  - Utilize Azure Traffic Manager for multi-region failover strategies.
+- For more, visit [Make All Things Redundant](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/redundancy).
+
+## [Minimize Coordination](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/coordination)
+- Reduce inter-service coordination
+## [Design to Scale Out](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out)
+- Design applications for horizontal scalability.
+- Recommendations:
+  - Avoid instance stickiness to ensure even workload distribution.
+  - Identify and resolve bottlenecks before scaling out.
+  - Decompose workloads based on scalability needs.
+  - Offload asynchronous and resource-intensive tasks.
+  - Utilize Azure's built-in autoscaling and design for both scale out and scale in.
+  - Consider scaling for redundancy, like using zone-redundant services.
+- For more, visit [Design to Scale Out](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/scale-out).
+## [Partition Around Limits](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/partitioning)
+- Overcome database, network, compute constraints
+## [Partition Around Limits](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/partitioning)
+### Types of Partitioning
+#### Horizontal Partitioning (Sharding)
+- Distributes data across multiple databases or tables based on a specific key.
+#### Vertical Partitioning
+- Splits a database into smaller parts, each holding a subset of data columns.
+#### Functional Partitioning
+- Divides data according to its use in different functional areas.
+- Address Azure subscription and service limits through partitioning.
+- [Data Partitioning Guidance](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/partitioning).
+
+## [Design for Operations](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/operations)
+- Equip operations team with tools
+## [Use Managed Services](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/paas)
+- Prefer PaaS over IaaS
+## [Use an Identity Service](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/identity)
+- Opt for IDaaS platforms
+## [Design for Evolution](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/evolutionary-design)
+- Adapt and evolve design
+## [Build for the Needs of Business](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/business-requirements)
+- Base design on business requirements
+## [Design for Operations](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/operations)
+- Equip operations team with tools
+## [Use Managed Services](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/paas)
+- Prefer PaaS over IaaS
+## [Use an Identity Service](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/identity)
+- Opt for ID

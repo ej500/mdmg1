@@ -1,0 +1,203 @@
+# Azure Analytics Products
+## Complexity with +100 Analytics Products
+### huge amount of time learning
+### +100 licensing plans
+### ChatGPT and other AI tools scream for simplicity.
+##  AI,ML,DB's
+## Other Analytics Tools
+### Azure Synapse Analytics
+- Limitless analytics service with unmatched time to insight
+  - Not a microservice - Integrated with Microsoft Fabric for analytics
+### Azure Databricks
+- AI design with Apache Spark™-based analytics
+  - Not a microservice - Can work with Microsoft Fabric as part of a data analytics solution
+### HDInsight
+- Provision cloud Hadoop, Spark, R Server, HBase, and Storm clusters
+  - Not a microservice - Potentially integrated with Microsoft Fabric for big data processing
+### Azure Stream Analytics
+- Real-time analytics on fast-moving streaming data
+  - Possibly a microservice - Likely a component in Microsoft Fabric for real-time streaming
+### Azure Data Lake Storage
+- Scalable, secure data lake for high-performance analytics
+  - Not a microservice - Storage component within Microsoft Fabric
+### Azure Data Explorer
+- Fast and highly scalable data exploration service
+  - Not a microservice - Can be utilized by microservices; integration with Microsoft Fabric for data exploration
+### Microsoft Purview
+- Govern, protect, and manage your data estate
+  - Not a microservice - Governance tool, possibly part of Microsoft Fabric's compliance features
+### Azure Data Factory
+- Hybrid data integration at enterprise scale, made easy
+  - Not a microservice - ETL service, potentially part of Microsoft Fabric's data integration layer
+### Azure Machine Learning
+- Build, train, and deploy models from the cloud to the edge
+  - Not a microservice - Could be integrated with Microsoft Fabric for ML workflows
+### Azure Analysis Services
+- Enterprise-grade analytics engine as a service
+  - Not a microservice - Analytics engine, possibly integrated with Microsoft Fabric for data analysis
+#### Power BI  is built on top of
+##### Power Query, Power Pivot, and Power View.
+
+
+# Microsoft Fabric Overview
+## Introduction
+###  Microsoft Fabric Simplify the Data Analytics Landscape
+###  Integration of Multiple Microsoft Services
+###  MSF couples products to work seamles together
+### Designed for simplicity across functionalities and workloads
+#### Functionalities
+##### The services Capabillities/Features
+###### Data Integration
+###### Advanced Analytics
+###### Machine Learning
+###### Business Intelligence
+#### Workloads 
+##### services batch processing/computing jobs 
+###### Batch Processing
+###### Real-Time Analytics
+###### Data Warehousing
+
+### Core Aspects of Microsoft Fabric
+#### Simplification Approach
+##### Reducing Complexity in Data Analytics
+##### Focus on results rather than technology
+##### Simplified licensing and integration of Azure services
+#### Umbrella Concept
+##### Unifying Diverse Services
+
+## Key Components of Microsoft Fabric
+### Storage
+#### OneLake
+##### Unified Data Lake Technology
+##### Emphasis on Being the ONE Data Lake
+###### Central Storage for Computing Services
+###### All Services Store and Read Data from OneLake
+###### Structured and Unstructured Data Handling
+##### Automatic Regional Coverage with a Single Tenant
+###### No Need for Multiple Regional Data Lakes
+##### OneLake - A Comprehensive Solution
+##### Simplifies Data Management Across Regions
+##### Efficient Data Storage Strategy
+###### Streamlines Data Storage and Retrieval Processes
+###### One Tenant Across All Regions
+###### Unified Management and Access Control
+###### Reduces Complexity and Enhances Efficiency
+######  [Lake House Explorer](https://i0.wp.com/radacad.com/wp-content/uploads/2023/05/Unified-data-foundation.png?ssl=1)
+-- This is a comment and won't show up in the final output 
+ "![Unified Data Foundation](https://i0.wp.com/radacad.com/wp-content/uploads/2023/05/Unified-data-foundation.png?ssl=1)
+
+### Data Integration
+#### Azure Data Factory 
+##### ADF is the successor of SSIS (SQL Server Integration Services)
+##### ETL for professionals 
+##### power to transfer billions and trillions of rows of data
+####   Dataflow
+#####  Transformation engine  simplified for analysts 
+#####  Buildt on enhancements in Power Query technology
+#####  Used alongside ADF
+### Data Engineering
+#### Synapse 
+##### Build infrastructure using Lakehouse (OneLake)
+##### Build pipelines to ingest  data
+##### Include Connectors to various sources
+##### Shortcuts or ADF to move data into Lakehouse
+
+### Data Warehousing
+#### Large Scale DWH
+#### Query powered by SQL Thecnology or Spark 
+##### SQL Thecnology 
+##### Apache Spark
+###### Azure Data Explorer (Kusto)
+###### Kusto is used for interacting with this technolog
+###### No need to use a separate tool or editor
+###### Allows integration to other providers as as well 
+
+####  Infinitely scalable DWH
+
+#####  data warehouse developer or admin do not need to scale up or down
+#####  ability to handle varying volumes of data and workloads efficiently
+#####  scale up or down as per the data processing needs
+#####  suitable for both small-scale and large-scale data operations.
+#####  complex queries without compromising on performance,
+
+#### Synapse Open DWH
+##### various data formats
+##### various processing languages
+##### Flexible data storage systems.
+######  Data can be stored in an open format parquet file.
+- Parquet file offers a system-independent way to store data in a columnar format
+- beneficial for analytical querying and efficient storage.
+- can be used across various platforms and services
+###### Azure Data Lake Storage
+- Large-scale analytics on structured and unstructured data
+- Seamless connection with data lakes
+###### Azure Blob Storage
+- Suitable for massive unstructured data storage
+- Blob Storage Connectivity Efficient handling of large data sets
+###### Cosmos DB
+- Globally distributed, multi-model database service
+- Integration support for varied data models
+- Low Latency
+- Mission Critical 
+- Models such as document, key-value, column-family
+- API: SQL,MongoDB,Gremlin,Table
+- IOT, mobile applications etc
+- suitable for horisontal scaling (distribute db load to more nodes)
+###### SQL Databases
+- Traditional relational data storage and management
+- Sql DB compatabillity Smooth integration with relational data systems
+
+### Data Science
+#### Synapse
+##### Tools for Data Science Projects
+- Data Science using Synapse is added as a workload
+- Data Science is a combination of features and tools used across the entire MS Fabric
+- Data Wrangler
+- Synapse ML
+- Cognitive Services
+- Large language models
+- PREDICT
+
+### Synapse Real-time Analytics workload
+#### Synapse
+##### Handling IOT and Log Analytics
+###### IOT Analytics
+###### Log Analytics
+###### event streaming technologies
+- (such as IoT or Event Hubs, pipelines, etc.),
+- loading data into KQL DB and Lakehouse via mirroring
+- which mean exact copy of data in one environment to another in near-real-time.
+- and then ML models to run experiments on it, 
+- and finally, use Power BI to see the results.
+
+### Business Intelligence
+#### Power BI
+##### Direct Lake (New Connection Type)
+- Faster than DirectQuery
+- Connects directly with one lake ?
+
+### Action Platform
+#### Data Activator
+##### Automating Actions Based on Data
+
+### Governance
+#### Purview
+##### Data Governance and Management
+##### Scan Entire Microsoft Fabric artifact (Not only PBI)
+##### Part of Fabric Portal
+##### end-to-end monitoring 
+##### and a comprehensive audit log system
+
+
+## Impact of Microsoft Fabric
+- Simplification of Licensing
+- Unified Environment for Data Services
+
+## Article Reference
+- [Read more about Microsoft Fabric](https://radacad.com/what-is-microsoft-fabric-and-why-it-is-a-big-deal)
+## Enable Microft Fabric in your tenant
+- [Enable Microft Fabric in your tenant](https://radacad.com/enabling-microsoft-fabric-in-your-tenant)
+
+
+
+
