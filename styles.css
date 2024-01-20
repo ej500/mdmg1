@@ -1,13 +1,22 @@
 /* FILEPATH: /c:/VC/netlify/styles.css */
 
 /* Reset default styles */
-body, h1, p {
+
+/*body, h1, p {
+    background-color: black;
+}
     margin: 0;
     padding: 0;
 }
+*/
+
+
 
 /* Global styles */
 body {
+    background-color: #d4d8e4;
+    color: #333;
+}
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
