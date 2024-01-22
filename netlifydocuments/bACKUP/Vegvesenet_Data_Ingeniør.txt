@@ -1,0 +1,92 @@
+Om Statens vegvesen
+
+Statens vegvesen leder an i utviklingen av et framtidsrettet, effektivt, miljøvennlig og trygt transportsystem. Vi bygger, drifter og vedlikeholder landets riksveier, og vi tar vare på helheten gjennom vårt nasjonale ansvar for beredskap på veg og ved utvikling av tydelig regelverk og standarder for alle.
+
+Gjennom arbeid og tilsyn med trafikanter og kjøretøy, ny teknologi og utvikling av digitale tjenester sikrer vi trafikantene og næringslivet en tryggere, enklere og grønnere reisehverdag.
+
+Virksomheten vår er organisert gjennom Vegdirektoratet og seks divisjoner.
+
+Om oss og stillingen
+
+Vi søker teamleder for DataOps-team!
+
+Statens vegvesen har en viktig jobb i samfunnet vårt og vi har data overalt, i alle former og fasonger. Vi trenger flinke folk som gjør at vi får mer ut av dataene våre enn noen gang! Etaten satser tungt på data, innsikt og analyse og det skjer definitivt mye spennende her fremover.
+
+Nå utvikler Statens vegvesen vår nye dataplattform Saga 2.0, som skal bli en tjeneste for innsamling, lagring, behandling, analyse, rapportering og deling av data i stor skala. Mens selve dataplattformen lages og videreutvikles av et dedikert plattform-team, etablerer vi nå egne team som henter inn og tilrettelegger data på plattformen (DataOps-team). Som leder av et slikt tilretteleggende team vil du få mulighet til å kombinere din dataingeniør-kompetanse med lederferdigheter, og være sentral i oppbyggingen av et nytt miljø og en ny måte å jobbe på. Sammen med teamet og brukere av etatens data, vil du utforske det store potensialet i Statens vegvesen sine data og skape verdi for etaten og samferdselssektoren.
+
+Er du den vi ser etter?
+
+Arbeidsoppgaver for stillingen
+
+Fagledelse og operativt ansvar for DataOps-teamets arbeid
+Utvikle og forvalte effektive prosesser, rutiner, grensesnitt og metoder for DataOps
+Koordinere støtte for innsikt og analyseaktiviteten hos ulike analyse-team
+Delta i design og implementering av skalerbare dataarkitekturer
+Etablere og overvåke pålitelige data pipelines gjennom dataplattformen
+Koordinering og deltakelse i feilsøking og problemløsning for data pipelines
+Øke kompetansen innen dataingeniør-faget og bygge en kultur for dataingeniør-arbeid
+Komme med forbedringsforslag og teste nye teknologier og verktøy
+Sikre etterlevelse av retningslinjer for personvern, data governance og informasjonssikkerhet
+
+
+Vær oppmerksom på at oppgavene kan variere og utvides over tid, og at du som ledende dataingeniør/teamleder også vil ha ansvar for teamrelaterte oppgaver og prosjekter. Av samme grunn forventer vi at denne rollen i starten vil være mer operativ enn den vil bli i fremtiden. På sikt vil vi også vurdere om det er hensiktsmessig å legge personalansvar til rollen. Stillingen er lokalisert enten i Trondheim eller Oslo. Stillingen forutsetter at du har sikkerhetsklarering eller at dette kan gis.
+
+Kompetansekrav
+
+Du har minimum mastergrad innen matematiske, økonomiske eller tekniske fag. Spesielt relevant og omfattende erfaring kan kompensere for utdanningskravet. Stillingen krever at du har god muntlig og skriftlig fremstillingsevne på norsk.
+
+Dersom du har tatt hele eller deler av utdanningen din i utlandet, anbefaler vi en autorisert oversettelse av dine papirer og godkjenning fra HKDIR (https:hkdir.no/utdanning-fra-utlandet).
+
+For å lykkes i rollen er det en fordel om du har
+
+omfattende erfaring innen dataingeniør-praksis, inkludert design og implementering av data pipelines og datamodellering
+dybdekunnskap om data lakehouse-arkitektur og stordatateknologier
+erfaring med strømmebehandling og behandling av sanntidsdata
+sterke ferdigheter i SQL og Python
+erfaring med ETL/ELT-prosesser, datamodellering og dataintegrasjon
+erfaring med å håndtere og analysere store datasett
+god kjennskap til prinsipper for data governance, personvern og informasjonssikkerhet
+erfaring med å lede eller veilede et team, med fokus på datasamling, -behandling og -tilrettelegging
+
+
+Vi legger vekt på at du
+
+er trygg, motivert og villig til å utvikle deg i rollen
+du evner å prioritere og sette mål 
+har gode samarbeids- og kommunikasjonsevner og trives som rollemodell og kulturskaper
+trives med å jobbe i tverrfaglige team og ha fokus på å veilede og gi råd
+
+
+Hvorfor skal du velge oss?
+
+Som ansatt i Statens vegvesen blir du en del av et solid og kunnskapsdelende fagmiljø. Du påvirker samfunnsutviklingen og får bidra til fremtidens løsninger på ditt fagfelt. Vi gir deg ansvarsfulle oppgaver og du vil få utvikle deg, både faglig og personlig, i takt med samfunnets nye utfordringer. Vi tar godt imot deg, og du blir en del av et fellesskap med godt arbeidsmiljø i hele landet.
+
+Hos oss får du:
+
+spennende arbeidsoppgaver i en etat i stadig utvikling
+godt arbeidsmiljø i nye lokaler i Trondheim eller Oslo
+introduksjonsprogram og fadderordning
+fleksitid og gode velferdsordninger med mulighet for trening i arbeidstiden
+medlemskap i en av de beste pensjonsordningene i Norge
+
+
+Din lønn avtales i samsvar med vår lønnspolitikk.
+
+Krav til søknaden
+
+Fyll ut feltene "Utdannelse" og "Arbeidserfaring" og last opp relevante vitnemål og eventuelle attester.
+
+Positiv særbehandling
+
+Statens vegvesen er opptatt av mangfold og ønsker å være en inkluderende arbeidsplass som gjenspeiler befolkningen. Vi har behov for medarbeidere med ulike bakgrunner, erfaringer, kompetanser og perspektiver for å løse vårt samfunnsoppdrag. Vi oppfordrer derfor alle kvalifiserte kandidater til å søke. Dersom det er kvalifiserte kandidater med funksjonsnedsettelse, hull i CV-en eller innvandrerbakgrunn, vil vi kalle inn minst én søker fra hver av disse gruppene til intervju. For at du skal bli vurdert som søker i disse gruppene (bli positivt særbehandlet), må du oppfylle visse krav. Du kan lese mer om positiv særbehandling på arbeidsgiverportalen.
+
+Søkerlista er offentlig
+
+Dersom du ønsker å reservere deg fra oppføring på offentlig søkerliste, må dette begrunnes. Hvis vi ikke kan ta ønsket ditt til følge, tar vi kontakt med deg.
+
+Har du spørsmål om stillingen?
+
+Kontakt Senior rådgiver Sidsel Jun Gausen tlf. 901 41 781 eller Rådgiver Amanda Garen tlf. 404 14 347.
+
+Vi har flere ledige stillinger samme fagmiljø. Se gjerne om en av disse passer deg vel så bra, eller tips en bekjent, ved å gå inn på www.vegvesen.no/jobb
+

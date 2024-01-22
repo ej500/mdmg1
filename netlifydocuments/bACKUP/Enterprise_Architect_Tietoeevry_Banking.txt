@@ -1,0 +1,59 @@
+ou may apply to Tietoevry by selecting Apply and fill your application details to the form. You may also Apply by using LinkedIn and populate details to your application from your LinkedIn profile.
+
+Bli med oss i utviklingen av verdensledende tjenester for nordiske og internasjonale bankkunder!
+
+Er du en person som har et brennende engasjement innenfor teknologi og som har bygget deg en bred erfaring innen arkitekturarbeid?
+
+Vi søker en Enterprise Platform Architect som vil bli endel av vår “Enterprise Architecture”-enhet i Essentials, Tietoevry Banking.
+
+Tieteoevry Banking leverer skalerbar og modulbasert bankvirksomhet med en unik software-portefølje til våre kunder i og utenfor Norden.
+
+Når du begynner i hos oss:
+
+Kommer du til å jobbe i team sammen med erfarne arkitekter. Vi jobber i nært samarbeid med andre enheter hvor vi deler erfaring og kunnskap
+Vil du ha ansvar for å definere fremtidsrettede løsninger
+Kommer du til å jobbe med moderne arkitektur
+Kommer du til være en pådriver i analysearbeid og beslutninger
+Vil du jobbe med prinsipper for infrastruktur for å skape skalerbare og effektive systemer
+
+
+Hvem vi leter etter:
+
+Du har bachelor- eller mastergrad i informatikk, informasjonsteknologi eller beslektede felt
+Dokumentert erfaring som Enterprise Platform Architect eller en lignende rolle i en stor virksomhet
+Du kan hjelpe våre kunder med å forstå, prioritere og håndtere risiko som følge av økt digitalisering
+Du er engasjert, kreativ og initiativrik
+Du er serviceorientert, sosial, har en positiv holdning og har fokus på kvalitet
+
+
+Det vi også tror du har:
+
+Dybdekunnskap om plattformer på virksomhets-nivå, arkitekturmønstre og designprinsipper
+Kunnskap om programmeringsspråk er en fordel
+Sterke analytiske, problemløsende og beslutningsevner
+Utmerkede kommunikasjons- og mellommenneskelige ferdigheter, med evnen til å formidle komplekse tekniske begreper til ikke-tekniske interessenter på norsk og engelsk
+Erfaring med smidige metoder og DevOps-praksis
+Relevant sertifisering (som TOGAF) er en fordel
+Offentlige og private skyteknologier og arkitekturer (AWS / Azure)
+Prinsipper for infrastruktur som kode og løsninger som Terraform.
+Kompetanse innenfor bank og finans er en fordel
+
+
+Hos oss vil du ha ansvar for og jobbe med å:
+
+Designe skalerbare og sikre plattformer på enterprise-nivå som oppfyller organisasjonens strategiske mål
+Veilede i utvikling og implementering av plattformen
+Vurdere og anbefale passende teknologi, verktøy og rammeverk for plattformutvikling
+Holde deg oppdatert på ny teknologi og bransjetrender
+Samarbeide med tverrfaglige team med forskjellig kompetanse for å sikre problemfri integrasjon av plattformer med eksisterende systemer og applikasjoner
+Forstå interessenters krav og basert på disse utarbeide planer for arkitektur hvor analyse av gjennomførbarhet og konsekvenser inngår
+Dokumentere arkitekturen vår og beslutninger knyttet til disse
+Kvalitetssikringsarbeid ved å etablere, sikre og veilede rundt arkitekturstandard og best praksis
+Fungere som en mentor og bidra til å løse komplekse og fremme et samarbeidsorientert og innovativt miljø
+Sørge for at plattformen følger bransjestandard, regulativer og sikkerhetsprotokoller
+Drive kontinuerlig forbedringsinitiativer, identifisere områder for forbedring og definere beste praksis for å optimalisere plattformens ytelse, pålitelighet og skalerbarhet
+
+
+Vi tilbyr:
+
+Vi tilbyr en åpen organisasjonskultur og tenker at den er viktig del for at en skal kunne bli fremgangsrik. Vårt arbeidsmiljø er aktivt og inkluderende og preget av samarbeid med omsorgsfulle kolleger. Vi kan love deg spennende, utfordrende og varierte oppgaver i Nordens største IT-selskap hvor du får muligheten til å skape fremtiden for en raskt voksende og viktig sektor. Fleksibel arbeidstid og en hybrid arbeidsmodell er endel av vår kultur. Vi har gode pensjons- og forsikringsordninger og profesjonelle og personlige utviklingsmuligheter gjennom Tietoevry Academy og karriereprogram. Vårt bedriftsidrettslag tilbyr mange og varierte muligheter og er med på å skape en sosial arena også utenfor arbeidstid.

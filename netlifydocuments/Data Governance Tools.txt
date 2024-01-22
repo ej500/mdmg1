@@ -1,0 +1,19 @@
+Here are some popular Data Governance tools:
+
+1. Collibra: Collibra is a leading Data Governance platform that provides a comprehensive set of tools for data stewardship, data cataloging, data quality management, and data lineage. It offers features like data policy management, data privacy compliance, and business glossary management.
+
+2. Informatica Axon: Informatica Axon is a data governance and metadata management tool that helps organizations establish and maintain data standards, policies, and processes. It provides capabilities for data cataloging, data lineage, data quality, and data stewardship.
+
+3. IBM InfoSphere Information Governance Catalog: IBM InfoSphere Information Governance Catalog is a data governance tool that enables organizations to create and manage a centralized catalog of data assets. It offers features like data classification, data lineage, data quality rules, and data stewardship workflows.
+
+4. Alation: Alation is a collaborative data governance platform that combines data cataloging, data stewardship, and data collaboration capabilities. It provides features like data discovery, data lineage, data governance workflows, and integration with various data sources.
+
+5. SAP Data Intelligence: SAP Data Intelligence is a data governance and integration tool that helps organizations manage and govern their data assets. It provides features like data cataloging, data lineage, data quality management, and data privacy compliance.
+
+6. Data3Sixty Govern: Data3Sixty Govern is a cloud-based data governance tool that offers capabilities for data cataloging, data lineage, data quality management, and data stewardship. It provides features like data asset discovery, business glossary management, and data policy enforcement.
+
+7. Talend Data Fabric: Talend Data Fabric is a data integration and management platform that includes data governance capabilities. It offers features for data cataloging, data quality, data lineage, and data stewardship, along with data integration and data preparation functionalities.
+
+8. Ataccama ONE: Ataccama ONE is a data governance and data quality platform that provides tools for data cataloging, data lineage, data quality management, and data privacy compliance. It offers features like data profiling, data cleansing, and data stewardship workflows.
+
+These are just a few examples of data governance tools available in the market. The choice of tool depends on specific requirements, budget, and the organization's data governance strategy.

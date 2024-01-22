@@ -1,0 +1,63 @@
+Vil du være med å løfte bruken av Power BI i Coop? 
+
+
+
+Coop er på en spennende digitaliseringsreise, og et av våre viktigste mål er å ta i bruk de enorme mengdene data vi genererer daglig, og å bli enda mer datadrevet!
+ Som vår nye senior utvikler vil du ikke bare være en ambassadør for å gjøre Coop mer datadrevet – du vil også være avgjørende i arbeidet med å utnytte all dataen som konstant genereres. 
+
+Business Intelligence teamene er ansvarlig for alle verktøyene for analyse og rapportering som brukes internt i Coop, og ut mot våre eksterne leverandører. Vi har nå behov for å utvide frontend teamet og er i den forbindelse på jakt etter noen med god kjennskap og erfaring med Power BI. Som vår nye Senior BI-utvikler vil du få du mulighet til å jobbe tett med forretningssiden og bidra i utformingen av morgendagens løsninger innenfor rapportering og bruk av data i Coop. 
+
+ 
+
+
+
+ Arbeidsoppgaver: 
+
+Du vil ha hovedansvar for styring og administrasjon av Power BI i Coop.
+Rollen innebærer å bygge nye rapporter og dashboards.
+Du vil også etablere nye rapporter i Power BI som skal erstatte det som i dag ligger i Coops Driftsportal, som er butikkenes viktigste styringsverktøy for overordnede KPI-er relatert til butikkdrift.
+Du vil støtte Coops forretningsenheter i opplæring og veiledning i bruken av Power BI.
+Du får mulighet til å være med å bygge fremtidens rapporterings- og analyse plattform i Coop, blant annet ved å bidra med å etablere Coops nye skybaserte dataplattform.
+Feilretting og endringshåndtering av publiserte rapporter og dashboards vil også inngå i rollen.
+
+
+Hvem ser vi etter? 
+
+For å trives og lykkes i denne rollen tror vi følgende kvalifikasjoner er nødvendige: 
+
+Erfaring med Power BI som rapporterings- og visualiseringsverktøy, samt administrering av Power BI oppsett og workspaces.
+Erfaring med programmeringsspråkene DAX og SQL.
+Erfaring med dimensjonal datamodellering i et skybasert datavarehus.
+Kjennskap til database og ETL-teknologier.
+God forretningsforståelse og evnen til å forklare tekniske utfordringer til ikke-tekniske interessenter.
+5-8 års relevant erfaring.
+Du må være komfortabel med å kommunisere (muntlig og skriftlig) på både norsk og engelsk i arbeidshverdagen.
+
+
+ I tillegg vil følgende også være fordelaktig:
+Erfaring fra dagligvare og/eller logistikk bransjen.
+God tallforståelse og god analysekunnskap.
+Det kan være en fordel å ha kjennskap til SAP produkter. Coop bruker blant annet SAP BW og SAP Business Objects.
+ 
+
+
+Hva kan vi tilby deg?
+
+Vi kan tilby en spennende og dynamisk arbeidshverdag med varierende og utfordrende oppgaver, og tilgang på moderne teknologier og systemer.
+I Digitalisering & Teknologi avdelingen tilrettelegger vi og bidrar til personlig og profesjonell utvikling, og alle ansatte får hvert år satt av arbeidstid til fagligutvikling.
+Du vil få stor påvirkningskraft på egen arbeidssituasjon og rolle. 
+Vi har et godt arbeidsmiljø med faglig dyktige kollegaer og stor takhøyde. 
+Vi har bedriftsidrettslag og eget treningsrom for ansatte. 
+Som ansatt i Coop kan du benytte deg av våre firmahytter. 
+Coop har en familievennlig og fleksibel personalpolitikk. 
+Vi tilbyr konkurransedyktige betingelser. 
+
+
+Søknader vurderes fortløpende. 
+
+ 
+
+
+Om arbeidsgiver 
+
+ Coop eies av 2 millioner medeiere. Dette skiller oss fra konkurrentene og gjenspeiles i vår visjon – det skal lønne seg å velge Coop. Vår form for verdiskaping handler om å skape verdier for de mange. Medeierskapet gir mulighet til å påvirke, og til å ta del i overskuddet som skapes. 150 år etter stiftelsen av det første forbrukersamvirkelaget i Norge jobber Coop fortsatt mot samme mål – basert på de samme verdiene. Samvirkelagene eier fellesorganisasjonen Coop Norge SA, som har ansvar for Coops felles innkjøp, grossist og logistikkvirksomhet, kjedeadministrasjon, merkevarebygging og medlemsprogram.

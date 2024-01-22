@@ -1,0 +1,56 @@
+Vil du bli en del av et av Nordens største data- og innsiktsmiljøer?
+
+Vi opplever høy etterspørsel etter våre tjenester og ser etter erfarne Data Engineers med relevant kompetanse for å styrke forretningsenheten Insights & Data. Vi ser etter deg som har stor interesse for data, innsikt og analyse!
+
+Insights & Data har et av Nordens største og ledende fagmiljøer innen moderne data- og innsiktsplattformer. Vi leverer tjenester innenfor Data Engineering, Arkitektur, Data Science & Artificial Intelligence, Master Data Management (MDM) og Data Governance. Vi bistår våre kunder med å få innsikt i sine data og skape forretningsverdi, ved å kombinere strategi og teknologi.
+
+Hvilke utfordringer venter deg?
+
+Hos Capgemini får du ta del i spennende og utfordrende prosjekter innen de fleste sektorer. Vi implementerer fremtidsrettede løsninger og bidrar til den digital utviklingen. Vi ligger i front av den teknologiske utviklingen, og jobber med de teknologier og verktøy som markedet etterspør.
+
+Som Data Engineer i Insights & Data får du muligheten til å spesialisere deg innen fagområder som blant annet:
+
+Dataorkestrering og ETL-prosesser 
+Skyløsninger og arkitektur innenfor Azure, AWS, GCP, Databricks og Snowflake 
+Moderne utviklingsmiljø med CI & CD 
+Infrastruktur som kode (IaC) og testautomatisering 
+Dataøkosystemer 
+
+For kandidater som ønsker å jobbe tettere på forretningen, vil det også være muligheter å jobbe med:
+
+Analytics og datavisualisering i PowerBI, Tableau eller andre verktøy 
+Prosjektledelse og smidig metodikk hvor du får mulighet til å lede tverrfaglige Capgemini-team i implementeringsprosjekter 
+
+Hvem ser vi etter?
+
+Vi søker deg som brenner for digitalisering, data og teknologi. Du trives med å jobbe i skjæringspunktet mellom forretning og IT, og liker å ta et dypdykk i tech.
+
+Vi Ønsker Deg Som Har Følgende Kvalifikasjoner
+
+Relevant høyere utdanning (Bachelor- eller mastergrad innenfor IT, ingeniørfag, matematikk, økonomi e.l.) 
+3 år+ arbeidserfaring innenfor Data-landskapet og fortrinnsvis som Data Engineer 
+Gode metodiske og analytiske ferdigheter 
+Gode kommunikasjon- og samarbeidsevner 
+Brennende ønske om å heve kompetanse innenfor Data Engineering på moderne skyløsninger 
+Kjennskap til infrastruktur som kode (IaC) 
+Kjennskap til eller erfaring med testautomatisering og CI / CD 
+God muntlig og skriftlig fremstillingsevne på norsk og engelsk 
+
+Hvorfor søke Capgemini?
+
+I Capgemini får du mulighet til å spesialisere deg innenfor flere ulike fagområder. Capgemini-gruppen består av ulike avdelinger, som tilbyr et bredt spekter av tjenester, fra Management Consulting, applikasjonsutvikling of testing til UX-design. Dette gir deg mulighet for å delta på tverrfaglige kurs, og jobbe i tverrfaglige prosjekter.
+
+Vi har et solid karriererammeverk med sterkt fokus på karriere- og utviklingsmål, i tillegg til kompetanseheving gjennom kurs, fagsamlinger og sertifiseringer 
+Stor grad av autonomi og kontroll over egen hverdag, hvor man har tillit til at konsulenten selv vet hva som kreves for å prestere best mulig 
+Vi har et ungt miljø og fine lokaler fordelt på de største byene i Norge 
+Du får delta på en rekke sosiale arrangement gjennom året, som lønningspils, fagdager, idrettslag og fester på kontorets takterrasse 
+Vi har flotte firmahytter blant annet Hafjell, Trysil og Hemsedal 
+Vi tilbyr konkurransedyktige lønnsbetingelser i tillegg til subsidiert trengingsmedlemsskap og gode forsikrings- og pensjonsordninger. Vi har også gode betingelser for deg i fødselspermisjon, samt tilbud om gratis helsesjekk 
+
+Høres dette interessant ut?
+
+Vi ser frem til å høre fra deg om dette høres interessant ut. For mer informasjon om fagområdene og stillingen, ta kontakt med en av våre konsulenter i Insights and Data, Edvard Graarud (454 47 614) eller Pål Ødeskaug (479 07 631).
+
+Vi hører også gjerne fra deg, dersom du ikke er på jobbsøk, men ønsker en uforpliktende prat om Capgemini og muligheter hos oss.
+
+Interessert i å bli bedre kjent med oss? Besøk bloggen vårhttps://itpraten.no/

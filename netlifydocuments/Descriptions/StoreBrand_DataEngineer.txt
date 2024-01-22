@@ -1,0 +1,47 @@
+Norges største private kapitalforvalter søker Senior Data Developer
+
+Har du lyst til å være en del av et team i vekst?
+
+Digital Asset Management & Funds er et av satsningsområdene til Storebrand. Vi er i underkant av 70 utviklere, analytikere, testere, designere og produktledere, som sammen har ansvaret for deler av teknologiplattformen til Storebrand. Dette gjelder alt fra utvikling av digitale tjenester mot ulike kundegrupper til bakenforliggende kjernesystemer. Plattformen understøtter effektiv og bærekraftig forvaltning av over 1.000 milliarder kroner for våre kunder. Dette er vi stolte av!
+
+Som utvikler i teamet Data & Insight er du en del av et faglig sterkt miljø, der tillit, samarbeid og kunnskapsdeling står sentralt. Gjør du en god jobb og tar ansvar, vil du bli lagt merke til, både av våre kolleger og av våre kunder.
+
+Storebrand har som ambisjon å bli et datadrevet konsern, der data benyttes i alle beslutningsprosesser, til å skape nye forretningsmuligheter og for å levere tjenester og kundereiser som gir fornøyde kunder.
+
+Hvordan vil arbeidsdagen din se ut? 
+
+Du vil bli en del av et motivert og kompetent utviklerteam som leverer robuste og hyppige leveranser på en moderne skyarkitektur bestående av Snowflake som database, dbt som transformasjonsverktøy og dbt cloud som orkestreringsverktøy. Du vil ha delansvar for å lage effektive tekniske løsninger for arbeid med data, utviklingsprosesser og kodekvalitet for dataplattformen til SAM.
+
+Du vil ha stor frihet til å påvirke beslutningsprosesser i tekniske spørsmål, og påvirke og veilede andre utviklere til å implementere gode løsninger. Du vil kunne sette standarden for hvordan vi jobber med moderne dataarkitektur i skyen, mens du samtidig leverer dataprodukter i tett samarbeid med forretningssiden og produkteier. Du vil inngå i et fagsamarbeid med arkitekter og tech leads i Storebrand konsernet, med et felles mål om å skape gode leveranser på en moderne skyarkitektur.
+
+Storebrand har tro på at vi lykkes med å bli datadrevet ved å gi rom for kontinuerlig utvikling av kompetanse. Som datautvikler hos oss får du rom til å utforske, prøve og feile og holde deg oppdatert på nye trender og teknologier.
+
+Vi tror det er en fordel om du kjenner deg igjen i noe av følgende: 
+
+Interesse for data og hvordan det kan brukes for å støtte forretningsbehov 
+Engasjement for teamets planer og utfordringer, og en viktig bidragsyter til innsikt, veiledning og beslutninger 
+Gode kommunikasjonsevner, på norsk og engelsk, der du evner å få frem ideer for andre utviklere- og forretningsressurser 
+Håndterer leveransepress på en god måte 
+Kjent med Snowflake og dbt 
+
+
+Vi søker en person som er nysgjerrig på data og ønsker å bidra til å bygge en moderne dataplattform Du trives godt i tett samspill og samarbeid med kolleger på tvers av selskapet. Gjennom dette evner du å gjøre om forretningsmessige utfordringer til teknologiske løsninger.
+
+Vi ser for oss at du har relevant høyere utdanning og arbeidserfaring innen datadomenet som seniorutvikler, arkitekt eller tech lead.
+
+Hva kan vi tilby? 
+
+I Storebrand har vi en svært god pensjonsavtale for alle ansatte, gode forsikringsordninger og mulighet for boliglån med gode renter. Vi er også opptatt av din helse og har gode avtaler hos blant annet lege, fysioterapeut, psykolog og tannlege.
+
+I tillegg til gode betingelser, er vi også opptatt av din egen utvikling og støtter deg i å bli den beste utgaven av deg selv på jobben. Work-life balance er selvsagt for oss, og vi har fleksibel arbeidstid.
+
+Vi holder til i flotte lokaler på Lysaker, sentralt plassert i nærheten av kollektivtransport, og med god kapasitet på sykkelparkering og garderober. Har du lyst til å trene i idrettshallen, på styrkerommet eller i spinningsalen så har vi et mangfoldig aktivitetstilbud i Storebrand Arena!
+
+Ellers kan vi også friste med et godt hyttetilbud på populære steder som Norefjell, Hafjell og Sjusjøen blant annet.
+
+Søknader vurderes fortløpende
+
+Har du spørsmål om rollen ta gjerne kontakt med Engineering Manager, Thea Pettersen (thea.rebekka.skarheim.pettersen@storebrand.no).
+
+Storebrand samarbeider med Semac for bakgrunnssjekk av aktuelle kandidater. Bakgrunnssjekken utføres etter samtykke fra deg som søker og innebærer at vi verifiserer CV og annen søknadsdokumentasjon i forbindelse med ansettelsen.
+
