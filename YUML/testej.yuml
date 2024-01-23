@@ -1,0 +1,23 @@
+// {type:class}
+
+// {type:class}
+[Data Ingestion|+IoT Devices;+Online Transactions;+Logs]
+[Data Ingestion Mechanisms|+Azure Data Factory;+Event Hubs]
+[Data Storage and Management|+Data Lakes;+Database Management]
+[Data Processing|+Data Cleaning and Transformation;+Data Integration Services]
+[Analytics and Intelligence|+Machine Learning and AI;+Big Data Analytics]
+[Reporting and Visualization|+Business Intelligence Tools;+Custom Reporting Solutions]
+[Security and Compliance|+Identity Management;+Data Security and Encryption;+Compliance Tools]
+[Infrastructure and Scaling|+Cloud Infrastructure;+Network Architecture;+Resource Management]
+[Development and Collaboration Tools|+DevOps Tools;+Collaboration Platforms]
+[APIs and Integration|+Interfaces for External Integrations;+Data Export and Import]
+
+[Data Ingestion]uses-.->[Data Ingestion Mechanisms]
+[Data Ingestion Mechanisms]uses-.->[Data Storage and Management]
+[Data Storage and Management]uses-.->[Data Processing]
+[Data Processing]uses-.->[Analytics and Intelligence]
+[Analytics and Intelligence]uses-.->[Reporting and Visualization]
+[Security and Compliance]uses-.->[Data Storage and Management]
+[Infrastructure and Scaling]uses-.->[Data Storage and Management]
+[Development and Collaboration Tools]uses-.->[Data Storage and Management]
+[APIs and Integration]uses-.->[Data Processing]

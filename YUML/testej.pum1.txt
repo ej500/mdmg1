@@ -1,0 +1,20 @@
+@startuml
+' Define the larger 'Data Integration' component
+component Data_Integration as "Data Integration" 
+
+' Define the smaller 'Data Storage' and 'Data Processing' components
+component Data_Storage as "Data Storage"
+component Data_Processing as "Data Processing"
+
+' Invisible arrows to position 'Data Storage' and 'Data Processing' next to 'Data Integration'
+Data_Integration -[hidden]-> Data_Storage
+Data_Integration -[hidden]-> Data_Processing
+
+' Invisible arrows to stack 'Data Storage' and 'Data Processing'
+Data_Storage -[hidden]down-> Data_Processing
+
+' Adjust the lengths to influence the layout
+Data_Integration -[hidden]right- Data_Storage : "     "
+Data_Integration -[hidden]right- Data_Processing : "     "
+
+@enduml

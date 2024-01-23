@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="Reflist.html">Reflist</a>
+    <a href="contact.html">Contact</a>
+    <a href="Togaf_BI_Sample.html">Togaf_BI_Sample</a>
+</nav>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>TOGAF_BI_SAMPLE</title>
+
+<html lang="en-GB"><head>
+    <meta charset="utf-8">
+    <meta name="description" content="The Open Group">
+    <title>TOGAF Series Guide: BI &amp; Analytics</title>
+  <link type="text/css" rel="stylesheet" href="Style.css">
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-8XWZX5H5E4&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-195689946-18&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BVPFV2ZSMQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-BVPFV2ZSMQ');
+  </script>
+  
+  <style>
+  table, th, td {
+    border: none;
+    border-collapse: collapse;
+    vertical-align:top;
+  }
+  </style>
+  </head>
+  <body class="book toc2 toc-left">
+  <div id="header">
+    <div>
+      <h3>TOGAF<sup>®</sup> Series Guide</h3>
+      <h1><a id="pgfId-1009981"></a><a id="_7088"></a>Information Architecture: Business Intelligence &amp; Analytics</h1>
+      <p><a id="pgfId-1003470"></a><a id="pgfId-1003474"></a>Prepared by Céline Lescop and Jean-Baptiste Piccirillo, with the support of the<br>
+      AXA Data Architecture Community and The Open Group Information Architecture Work Group</p>
+      <p><img src="bi-analytics/bi-analytics-1.png" width="244" height="72" alt=""><a id="pgfId-1012340"></a></p>
+      <p><br>
+      <a id="pgfId-1012350"></a><a id="pgfId-1012351"></a>Copyright © 2023, The Open Group. <a id="pgfId-1018673"></a>All rights reserved.</p>
+      <p><a id="pgfId-1018674"></a>No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior permission of the copyright owners.</p>
+      <p>Any use of this publication for commercial purposes is subject to the terms of the Annual Commercial License relating to it. For further information, see <a target="_parent" href="http://www.opengroup.org/legal/licensing">www.opengroup.org/legal/licensing</a>.</p>
+      <p><a id="pgfId-1018482"></a>TOGAF<sup>®</sup> Series Guide</p>
+      <p><strong>Information Architecture: Business Intelligence &amp; Analytics</strong></p>
+      <p><a id="pgfId-1018486"></a><a id="pgfId-1012385"></a><a id="pgfId-1012396"></a>ISBN:&nbsp;1-957866-28-4</p>
+      <p>Document Number:&nbsp;G238</p>
+      <p><a id="pgfId-1012397"></a><a id="pgfId-1012398"></a>Published by The Open Group, August 2023.</p>
+      <p><a id="pgfId-1012406"></a><a id="pgfId-1012412"></a>Comments relating to the material contained in this document may be submitted to:</p>
+      <p><a id="pgfId-1012413"></a>The Open Group, Apex Plaza, Forbury Road, Reading, Berkshire, RG1 1AX, United Kingdom</p>
+      <p>or by electronic mail to:</p>
+      <p><a id="pgfId-1012420"></a><a target="_parent" href="http://www.opengroup.org/nospam?webemail-ogspecs">ogspecs@opengroup.org</a></p>
+      <div id="toc" class="toc2"> 
+  <div id="toctitle"><a target="_parent" href="../index.html"><img src="../images/home.png" width="20" border="0" alt="Home" text="Home"></a> The TOGAF® Standard</div>
+  <hr> 
+  <div class="tooltip"> 
+  <span class="tooltiptext">Provide feedback on this page</span> 
+  <a href="/cgi/c220feedback.cgi"> 
+  <span style="color: #00667F;"> 
+  <i class="fa fa-comments fa-2x" aria-hidden="true"></i> 
+  <i class="fa fa-bug fa-2x" aria-hidden="true"></i> 
+  </span> 
+  </a> 
+  </div> 
+  <hr>
+  <div id="toctitle"><a id="pgfId-916404"></a><a id="pgfId-916445"></a>Table of Contents</div>
+      <p><a id="pgfId-925318"></a><a id="pgfId-999206"></a><a href="#_Toc141274129">1&nbsp;Introduction</a></p>
+      <p><a href="#_Toc141274130">1.1&nbsp;The ArchiMate® Modeling Notation</a></p>
+      <p><a href="#_Toc141274131">2&nbsp;Business Intelligence &amp; Analytics Capability</a></p>
+      <p><a href="#_Toc141274132">2.1&nbsp;BI &amp; Analytics High-Level Reference Model</a></p>
+      <p><a href="#_Toc141274133">2.2&nbsp;BI &amp; Analytics High-Level Business Functions Description</a></p>
+      <p><a href="#_Toc141274134">2.3&nbsp;BI &amp; Analytics High-Level Application Functions Description</a></p>
+      <p><a href="#_Toc141274135">3&nbsp;Process and Methodology</a></p>
+      <p><a href="#_Toc141274136">3.1&nbsp;TOGAF ADM Specialization for BI &amp; Analytics Capability</a></p>
+      <p><a href="#_Toc141274137">3.2&nbsp;Reference BI &amp; Analytics Roadmap Steps (ADM Phase F – Migration Planning)</a></p>
+      <p><a href="#_Toc141274138">3.2.1&nbsp;Step 1</a></p>
+      <p><a href="#_Toc141274139">3.2.2&nbsp;Step 2</a></p>
+      <p><a href="#_Toc141274140">3.2.3&nbsp;Step 3</a></p>
+      <p><a href="#_Toc141274141">3.2.4&nbsp;Step 4</a></p>
+      <p><a href="#_Toc141274142">4&nbsp;Reference Models</a></p>
+      <p><a href="#_Toc141274143">4.1&nbsp;BI &amp; Analytics Reference Model – Goals</a></p>
+      <p><a href="#_Toc141274144">4.2&nbsp;BI &amp; Analytics Reference Model – Detailed Business Functions</a></p>
+      <p><a href="#_Toc141274145">4.2.1&nbsp;Description of the Business Functions</a></p>
+      <p><a href="#_Toc141274146">4.3&nbsp;BI &amp; Analytics Reference Model – Detailed Application Functions</a></p>
+      <p><a href="#_Toc141274147">4.3.1&nbsp;Description of the Application Functions</a></p>
+      <p><a href="#_Toc141274148">4.4&nbsp;BI &amp; Analytics Reference Model – Requirements</a></p>
+      </div>
+  </div>
+  </div>
+  <div id="content">
+  <h2 id="_preface"> <a id="pgfId-1011280"></a>Preface</h2>
+  <div class="openblock partintro">
+  <div class="content">
+      <h3><a id="pgfId-1005218"></a>The Open Group</h3>
+      <p>The Open Group is a global consortium that enables the achievement of business objectives through technology standards. Our diverse membership of more than 900 organizations includes customers, systems and solutions suppliers, tool vendors, integrators, academics, and consultants across multiple industries.</p>
+      <p>The mission of The Open Group is to drive the creation of Boundaryless Information Flow™ achieved by:</p>
+      <ul>
+        <li>Working with customers to capture, understand, and address current and emerging requirements, establish policies, and share best practices</li>
+        <li>Working with suppliers, consortia, and standards bodies to develop consensus and facilitate interoperability, to evolve and integrate specifications and open source technologies</li>
+        <li>Offering a comprehensive set of services to enhance the operational efficiency of consortia</li>
+        <li>Developing and operating the industry’s premier certification service and encouraging procurement of certified products</li>
+      </ul>
+      <p>Further information on The Open Group is available at <a target="_parent" href="http://www.opengroup.org/">www.opengroup.org</a>.</p>
+      <p>The Open Group publishes a wide range of technical documentation, most of which is focused on development of Standards and Guides, but which also includes white papers, technical studies, certification and testing documentation, and business titles. Full details are available at <a target="_parent" href="http://www.opengroup.org/library">www.opengroup.org/library</a>.</p>
+      <h3>The TOGAF<sup>®</sup> Standard, a Standard of The Open Group</h3>
+      <p>The TOGAF Standard is a proven enterprise methodology and framework used by the world’s leading organizations to improve business efficiency.</p>
+      <h3>This Document</h3>
+      <p><a id="pgfId-1016152"></a>This document is the TOGAF<sup>®</sup> Series Guide to Information Architecture: Business Intelligence &amp; Analytics. It has been developed and approved by The Open Group.</p>
+      <p>This document is structured as follows:</p>
+      <ul>
+        <li>
+          Chapter <a href="#_Ref423443382">1</a> provides a high-level introduction to this document, introducing the BI &amp; Analytics topics
+        </li>
+        <li>
+          Section <a href="#_Ref119069249">1.1</a> describes the ArchiMate<sup>®</sup> modeling notation as used in this document
+        </li>
+        <li>
+          Chapter <a href="#_Ref73010472">2</a> describes the BI &amp; Analytics capability, introducing the reference model from a high-level point of view
+        </li>
+        <li>
+          Chapter <a href="#_Ref119069294">3</a> proposes an Architecture Development Method (ADM) specialization for BI &amp; Analytics and data platforms
+        </li>
+        <li>
+          Chapter <a href="#_Ref119069308">4</a> proposes detailed functional reference models describing BI &amp; Analytics capabilities
+        </li>
+      </ul>
+      <p>The intended audience for this document is Enterprise Architects, Data Architects, and any IT professional working on data BI topics, etc.</p>
+      <p>More information is available, along with a number of tools, guides, and other resources, at <a target="_parent" href="http://www.opengroup.org/architecture">www.opengroup.org/architecture</a>.</p>
+      <h3>About the TOGAF<sup>®</sup> Series Guides</h3>
+      <p>The TOGAF<sup>®</sup> Series Guides contain guidance on how to use the TOGAF Standard and how to adapt it to fulfill specific needs.</p>
+      <p>The TOGAF<sup>®</sup> Series Guides are expected to be the most rapidly developing part of the TOGAF Standard and are positioned as the guidance part of the standard. While the TOGAF Fundamental Content is expected to be long-lived and stable, guidance on the use of the TOGAF Standard can be industry, architectural style, purpose, and problem-specific. For example, the stakeholders, concerns, views, and supporting models required to support the transformation of an extended enterprise may be significantly different than those used to support the transition of an in-house IT environment to the cloud; both will use the Architecture Development Method (ADM), start with an Architecture Vision, and develop a Target Architecture on the way to an Implementation and Migration Plan. The TOGAF Fundamental Content remains the essential scaffolding across industry, domain, and style.</p>
+      <h3>Trademarks</h3>
+      <p>ArchiMate, FACE logo, Making Standards Work, Open O logo, Open O and Check certification logo, OSDU, Platform 3.0, The Open Group, TOGAF, UNIX, UNIXWARE, and X logo are registered trademarks and Boundaryless Information Flow, Build with Integrity Buy with Confidence, Commercial Aviation Reference Architecture, Dependability Through Assuredness, Digital Practitioner Body of Knowledge, DPBoK, EMMM, FACE, FHIM Profile Builder, FHIM logo, FPB, Future Airborne Capability Environment, IT4IT, IT4IT logo, O-AA, O-DEF, O-HERA, O-PAS, Open Agile Architecture, Open FAIR, Open Footprint, Open Process Automation, Open Subsurface Data Universe, Open Trusted Technology Provider, Sensor Integration Simplified, SOSA, and SOSA logo are trademarks of The Open Group.</p>
+      <p>Hadoop is a registered trademark of the Apache Software Foundation (ASF).</p>
+      <p>Java is a registered trademark of Oracle and/or its affiliates.</p>
+      <p>All other brands, company, and product names are used for identification purposes only and may be trademarks that are the sole property of their respective owners.</p>
+      <h3><a id="pgfId-1012338"></a><a id="pgfId-1017135"></a>About the Authors</h3>
+      <p><b>AXA Data Architecture Community</b></p>
+      <p>This document is inspired by Data Architecture deliverables donated to The Open Group by AXA. They are the results of the Data Architects community’s work led by the group and with the contribution of affiliates mainly in France, Germany, Belgium, United Kingdom, Japan, US, Hong Kong, Spain, Switzerland, and Italy from 2015 to 2021. The aim of this community is to share Data Architecture best practices across the AXA organization to improve and accelerate the architecture delivery.</p>
+      <p>AXA is a global insurer (<a target="_parent" href="http://www.axa.com">www.axa.com</a>).</p>
+      <p><b>Céline Lescop – Author</b></p>
+      <p>Céline holds a Master’s degree (1996) in Computer Science (<a target="_parent" href="http://www.ensiie.fr/">www.ensiie.fr</a>). She was a Data Project Leader in the pharmaceutical industry from 1999 until 2012 (Galderma &amp; Astrazeneca), an Architect and TOGAF<sup>®</sup> trainer from 2012 to 2015 at Arismore (The Open Group, France), and has been an Enterprise Architect at AXA leading Data Architecture practice since 2016 and the Digital Sustainability program since 2020.</p>
+      <p><b>Jean-Baptiste Piccirillo – Author</b></p>
+      <p>Jean-Baptiste holds a Master’s degree (2010) in Computer Science (<a target="_parent" href="http://www.ensiie.fr/">www.ensiie.fr</a>). He was an Architect until 2015 for Arismore (The Open Group, France), a Data Scientist for AXA from 2015 to 2018, and he is currently a Data Architecture and Data Management Consultant for Rhapsodies Conseil (<a target="_parent" href="https://www.rhapsodiesconseil.fr/">www.rhapsodiesconseil.fr</a>) supporting AXA.</p>
+      <h3>Acknowledgements</h3>
+      <p><a id="pgfId-1017210"></a><a id="pgfId-1017158"></a><a id="pgfId-1018548"></a><a id="pgfId-999220"></a><a id="pgfId-1000001"></a>(Please note affiliations were current at the time of approval.)</p>
+      <p>The Open Group gratefully acknowledges members of The Open Group Architecture Forum past and present for their contribution in the development of this document:</p>
+      <ul>
+        <li>Berenger Caudron, Data Architect at AXA Group Operation</li>
+        <li>Chris Harding, Principal, Lacibus Ltd.</li>
+        <li>Guillaume Hervouin, Data Architect at AXA Group Operation</li>
+        <li>Jann-Philipp Zocher, Data Architect at AXA Germany</li>
+      </ul>
+      <p>The Open Group gratefully acknowledges the following reviewers who participated in the Company Review of this document:</p>
+      <ul>
+        <li>Chris Harding</li>
+        <li>James Thomas</li>
+      </ul>
+      <h3><a id="References"></a>Referenced Documents</h3>
+      <p>The following documents are referenced in this TOGAF<sup>®</sup> Series Guide:</p>
+      <p><a id="RefC226"></a>C226&nbsp;ArchiMate<sup>®</sup> 3.2 Specification, a standard of The Open Group (C226), published by The Open Group, October 2022; refer to: <a target="_parent" href="http://www.opengroup.org/library/c226">www.opengroup.org/library/c226</a></p>
+      <p><a id="RefC220">C220</a>&nbsp;TOGAF<sup>®</sup> Standard, 10<sup>th</sup> Edition, a standard of The Open Group (C220), published by The Open Group, April 2022; refer to: <a target="_parent" href="http://www.opengroup.org/library/c220">www.opengroup.org/library/c220</a></p>
+      <p>G176&nbsp;<a id="RefG176"></a>TOGAF<sup>®</sup> Series Guide: Business Scenarios (G176), published by The Open Group, April 2022; refer to: <a target="_parent" href="http://www.opengroup.org/library/g176">www.opengroup.org/library/g176</a></p>
+      <p><a id="RefInmon1995"></a>Inmon 1995&nbsp;What is a Data Warehouse?, W.H. Inmon, Prism, Volume 1, Number 1, 1995; refer to: <a target="_parent" href="https://www.comp.nus.edu.sg/~lingtw/cs4221/dw.pdf">https://www.comp.nus.edu.sg/~lingtw/cs4221/dw.pdf</a></p>
+      <p><br></p>
+      </div><br>
+    <div>
+      <div>
+        <h1>1 <a id="pgfId-1010249"></a><a id="_0846"></a><a id="Chapter1"></a><a id="_Ref423443382"></a><a id="_Toc437515138"></a><a id="_Toc141274129"></a>Introduction</h1>
+      </div>
+      <p><a id="pgfId-1010291"></a><a id="pgfId-1012221"></a><a id="pgfId-1011079"></a>This document describes information architecture techniques to support architecture work using Business Intelligence (BI) &amp; Analytics.</p>
+      <p>This document includes:</p>
+      <ul>
+        <li>
+          Reference models for the assessment and design of BI &amp; Analytics capabilities; see Chapter <a href="#_Ref73010472">2</a>, Section <a href="#_Ref70065435">4.2</a>, and Section <a href="#_Ref104902485">4.3</a>
+        </li>
+        <li>
+          An adaptation of the TOGAF ADM to support the BI &amp; Analytics capability; see Section <a href="#_Ref97285046">3.1</a> and Section <a href="#_Ref97285133">3.2</a>
+        </li>
+      </ul>
+      <p>These best practices are based on project experiences and have been generalized to support wide usage in any organization. They aim to:</p>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+        <li>Accelerate architecture delivery to make it more efficient by not reinventing the wheel</li>
+        <li>Bring clarity on the topic, providing a framework to train Data Architects and other data professionals</li>
+        <li>Provide a common language to describe BI &amp; Analytics capabilities to data professionals: Chief Data Officers (CDOs), Data Managers, Architects, Data Engineers, Data Scientists, etc.</li>
+      </ul>
+      <h2>1.1  <a id="Chapter2"></a><a id="pgfId-1006866"></a><a id="pgfId-1021297"></a><a id="_4735"></a><a id="Section11"></a><a id="_Toc45724150"></a><a id="_Toc48284148"></a><a id="_Toc48303769"></a><a id="_Toc49781011"></a><a id="_Toc49781116"></a><a id="_Toc110352817"></a><a id="_Ref119069249"></a><a id="_Toc141274130"></a>The ArchiMate<sup>®</sup> Modeling Notation</h2>
+      <p>The reference models in this document are described using the ArchiMate modeling notation, as defined in the ArchiMate Specification, a standard of The Open Group [<a href="#RefC226">C226</a>].</p>
+      <p>The ArchiMate elements used in this document are shown in <a href="#_Ref115343281">Figure 1</a>.</p>
+      <p><img src="bi-analytics/bi-analytics-2.png" width="50%" alt=""></p>
+      <p><a id="_Ref115343281"></a><b> Figure 1: The ArchiMate Modeling Notation Elements Used in this Document</b></p>
+      <p>Standard definitions:</p>
+      <ul>
+        <li>Goal: 
+      <p>A high-level statement of intent, direction, or desired end state for an organization and its stakeholders.</p></li>
+        <li>Requirement:
+      <br><p>A statement of need defining a property that applies to a specific system as described by the architecture.</p>
+        </li><li>Business function:
+      <br><p>A collection of business behavior based on a chosen set of criteria such as required business resources and/or competencies, and is managed or performed as a whole.</p>
+      <p>Business functions are closely aligned to an organization, but not necessarily explicitly governed by the organization.</p>
+        </li><li>Application function:
+      <br><p>Automated behavior that can be performed by an application component.</p>
+      </li></ul>
+      <div>
+        <h1>2 <a id="Chapter3"></a><a id="_Ref73010472"></a><a id="_Ref73108649"></a><a id="_Toc110352818"></a><a id="_Toc141274131"></a>Business Intelligence &amp; Analytics Capability</h1>
+      </div>
+      <p>The BI &amp; Analytics capability refers to the people, processes, organizations, and systems put together to create value-added information from relevant decision-making data of the organization. This capability breaks applicative data siloes and allows the structuring and leveraging of data according to decision-making and analytics use-cases. It includes business value, data quality, availability, and security to deliver the required common data to relevant reporting or analytics use-cases.</p>
+      <p>This capability is founded on reference business functions and reference application functions. This chapter covers the high-level functions reference model, and their definitions. More detailed functions are available in the dedicated reference model part of this document; see Sections <a href="#_Ref70065435">4.2</a> and <a href="#_Ref104902485">4.3</a>.</p>
+      <h2>2.1  <a id="_Toc110352819"></a><a id="_Toc141274132"></a>BI &amp; Analytics High-Level Reference Model</h2>
+      <p><img src="bi-analytics/bi-analytics-3.png" width="90%" alt=""></p>
+      <p><b>Figure 2: BI &amp; Analytics Capability – High-Level Functions</b></p>
+      <h2>2.2  <a id="_Ref73116863"></a><a id="_Ref73116866"></a><a id="_Ref73117565"></a><a id="_Toc110352820"></a><a id="_Toc141274133"></a>BI &amp; Analytics High-Level Business Functions Description</h2>
+      <p><b>Table 1: BI &amp; Analytics High-Level Business Functions</b></p>
+      <table class="tableblock frame-all grid-all stretch">
+        <thead>
+          <tr>
+            <td class="tableblock">
+              <p><strong>Business Function</strong></p>
+            </td>
+            <td class="tableblock">
+              <p><strong>Description</strong></p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tableblock">
+              <p>Define the Strategy &amp; Roadmaps</p>
+            </td>
+            <td class="tableblock">
+              <p>Define the BI &amp; Analytics vision for the organization, and how it contributes to organization objectives. Concretize this vision through a well-defined BI &amp; Analytics strategy and roadmap.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Provide Necessary Data Sources for BI &amp; Analytics Purposes</p>
+            </td>
+            <td class="tableblock">
+              <p>Identify the necessary data sources needed by the BI &amp; Analytics strategy. Make the data available for related BI &amp; Analytics use-cases.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Design &amp; Develop BI &amp; Analytics Value Chain</p>
+            </td>
+            <td class="tableblock">
+              <p>Design and implement the data value chain to transform raw data into a “ready-to-use” business view serving BI &amp; Analytics use-cases.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Protect Data &amp; Ensure Compliance</p>
+            </td>
+            <td class="tableblock">
+              <p>Put in place all processes and tools to protect available data and ensure compliance; e.g. General Data Protection Regulation (GDPR).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define &amp; Apply a Data Quality Framework</p>
+            </td>
+            <td class="tableblock">
+              <p>Put in place all processes and tools to ensure that the quality of provided data is at the expected level regarding business requirements.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Leverage Metadata Management for BI &amp; Analytics</p>
+            </td>
+            <td class="tableblock">
+              <p>Implement processes and tools to leverage metadata management capabilities to document data and data lineage on the BI &amp; Analytics value chain from operational data sources to data consumption.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Operate Platforms</p>
+            </td>
+            <td class="tableblock">
+              <p>Operate technical functions supporting BI &amp; Analytics capability.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Govern &amp; Measure</p>
+            </td>
+            <td class="tableblock">
+              <p>Govern the transformation of the BI &amp; Analytics capability: measure data volumes, costs, carbon footprint, and actual value.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Communicate &amp; Train</p>
+            </td>
+            <td class="tableblock">
+              <p>Communicate around BI &amp; Analytics value, organize training plan for technical community (Data Engineer, Data Scientist, …) and business end-users.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>2.3  <a id="_Ref73117536"></a><a id="_Ref73117544"></a><a id="_Toc110352821"></a><a id="_Toc141274134"></a>BI &amp; Analytics High-Level Application Functions Description</h2>
+      <p><b>Table 2: BI &amp; Analytics High-Level Application Functions</b></p>
+      <table class="tableblock frame-all grid-all stretch">
+        <thead>
+          <tr>
+            <td class="tableblock">
+              <p><strong>Application Function</strong></p>
+            </td>
+            <td class="tableblock">
+              <p><strong>Description</strong></p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tableblock">
+              <p>Data Integration</p>
+            </td>
+            <td class="tableblock">
+              <p>Services that allow the integration of different data from one or more providers to enable data ingestion by consumers and data distribution for BI &amp; Analytics purposes. This could be done, for example, by batch, streaming, interface, etc.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Data Storage</p>
+            </td>
+            <td class="tableblock">
+              <p>Services that allow the persistent storage of structured, semi-structured, or unstructured data.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Data Processing</p>
+            </td>
+            <td class="tableblock">
+              <p>Services that allow data transformation, including basic preparations or more advanced features, calculations, leveraging statistics, or data science.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Information Reporting &amp; Dashboarding</p>
+            </td>
+            <td class="tableblock">
+              <p>Services allowing reporting and dashboarding activities using data stored in BI &amp; Analytics.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Decision Support Analysis &amp; Visualization</p>
+            </td>
+            <td class="tableblock">
+              <p>Services allowing data discovery and visualization using data stored in BI &amp; Analytics.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Administration</p>
+            </td>
+            <td class="tableblock">
+              <p>Administration tasks required to support BI &amp; Analytics capabilities, such as access management, scheduling, etc.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Data Access for Engineering &amp; Data Management Use</p>
+            </td>
+            <td class="tableblock">
+              <p>Direct access to the data of BI &amp; Analytics for advanced data stewards, data engineers, data scientists, data administrators, etc.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Development</p>
+            </td>
+            <td class="tableblock">
+              <p>Development capabilities including Integrated Development Environments (IDE) development integrated environment and continuous delivery chains for data scientists, data engineers, etc.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Monitoring</p>
+            </td>
+            <td class="tableblock">
+              <p>Monitoring services for infrastructure, network, and applications to guarantee the agreed service level.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <h1>3 <a id="Chapter4"></a><a id="_Toc49781119"></a><a id="_Ref79134499"></a><a id="_Ref79134505"></a><a id="_Toc110352822"></a><a id="_Ref115361941"></a><a id="_Ref119069294"></a><a id="_Toc141274135"></a>Process and Methodology</h1>
+      </div>
+      <h2>3.1  <a id="_Ref97285046"></a><a id="_Toc110352823"></a><a id="_Toc141274136"></a>TOGAF ADM Specialization for BI &amp; Analytics Capability</h2>
+      <p>A synthesis of key actions related to the TOGAF ADM phases (Preliminary, A, B, C, D, E, F, G) that should be done in the context of a BI &amp; Analytics capability delivery is described in this chapter.</p>
+      <p><b>Table 3: BI &amp; Analytics Capability Delivery Related to TOGAF ADM Phases</b></p>
+      <table class="tableblock frame-all grid-all stretch">
+        <thead>
+          <tr>
+            <td class="tableblock">
+              <p><strong>TOGAF ADM Phase</strong></p>
+            </td>
+            <td class="tableblock">
+              <p><strong>BI &amp; Analytics Recommendations</strong></p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tableblock">
+              <p>Preliminary</p>
+            </td>
+            <td class="tableblock">
+              <p>Confirm that the proper Enterprise Architecture capabilities are in place to implement the model: repository, data sources, platforms, etc.</p>
+              <p>Check that a multi-disciplinary team is in place with the prerequisite skills to architect an effective BI &amp; Analytics capability.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>A – Architecture Vision</p>
+            </td>
+            <td class="tableblock">
+              <p>Identify the relevant principles for BI &amp; Analytics architecture and define them.</p>
+              <p>Develop an overview of existing pain points related to reporting, data analytics, data science, and statistics data from a BI &amp; Analytics user point of view (the TOGAF Business Scenario technique, can be used for that purpose [<a href="#RefG176">G176</a>]).</p>
+              <p>Develop the value proposition for the target BI &amp; Analytics capability considering the existing or new business usages, improvement expected (data available, data quality, data documentation, data accessibility).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>B – Business Architecture</p>
+            </td>
+            <td class="tableblock">
+              <p>Identify the as-is and to-be business users of the BI &amp; Analytics capability.</p>
+              <p>List the BI &amp; Analytics usages on this business scope: futures, or existing usages to be improved.</p>
+              <p>Define the target operational business organization to manage a BI &amp; Analytics usage, from design to continuous deployment and maintenance.</p>
+              <p>Define the value of each usage and the priority of each one, based, for example, on complexity and value for the organization.</p>
+              <p>Identify the key data – at business object level first – required to deliver the expected use-cases. Evaluate the coverage of the as-is capability and identify the gap with to-be requirements.</p>
+              <p>The business functions provided in Section <a href="#_Ref73116863">2.2</a> can be used as a guide to the steps.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>C – Information Systems Architectures</p>
+            </td>
+            <td class="tableblock">
+              <p>Data:</p>
+              <ul>
+                <li>Specify a data modeling method and its application to the enterprise data</li>
+                <li>From the data expected by the business, define the main attributes of each data structure and the links between them</li>
+                <li>
+                  Define the logical data structures that will be used to cover different business requirements – raw data structure, intermediate data layer (for example, enterprise/domain data warehouses), end data layer (<a href="#_Glossary">data mart</a>/denormalized business views)
+                </li>
+                <li>For each set of data, define the lifecycle management (from integration in the platform to “end of life/deletion”)</li>
+                <li>Perform a data quality assessment of each set of data</li>
+              </ul>
+              <p>Application:</p>
+              <ul>
+                <li>Define the Target Application Architecture to support collection, transport, storage, and access for BI &amp; Analytics purposes</li>
+                <li>Identify the source applications providing the data expected by the business</li>
+                <li>Define the processes to support the growth of the platform in terms of data (volumes, diversity, duplicates)</li>
+                <li>Identify the gaps between as-is architecture and to-be in term of variety, velocity, volume</li>
+              </ul>
+              <p>The application functions provided in Section <a href="#_Ref73117536">2.3</a> can be used as a guide to the steps.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>D – Technology Architecture</p>
+            </td>
+            <td class="tableblock">
+              <p>Identify requirements for data platforms to support BI &amp; Analytics operations.</p>
+              <p>Specify technology support for data modeling.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>E – Opportunities and Solutions</p>
+            </td>
+            <td class="tableblock">
+              <p>Use the application reference models in this document to challenge solution providers around BI &amp; Analytics. Reference models can be used as a basis to build selection criteria of the solutions.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>F – Migration Planning</p>
+            </td>
+            <td class="tableblock">
+              <p>Refer to Section <a href="#_Ref115350738">3.2</a> to address the migration from a legacy BI &amp; Analytics technical solution to a new generation one.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>G – Implementation Governance</p>
+            </td>
+            <td class="tableblock">
+              <p>Organize compliance review with BI &amp; Analytics projects to check that they respect BI &amp; Analytics principles and the Target Architecture.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>3.2  <a id="_Toc45724158"></a><a id="_Toc48284156"></a><a id="_Toc51647898"></a><a id="_Ref73118325"></a><a id="_Ref73118329"></a><a id="_Ref97285133"></a><a id="_Toc110352824"></a><a id="_Ref115350738"></a><a id="_Toc141274137"></a>Reference BI &amp; Analytics Roadmap Steps (ADM Phase F – Migration Planning)</h2>
+      <p>Looking back at the history of BI &amp; Analytics on the market, different architecture pattern styles and technical solutions have been used. For a given organization, the coexistence of several BI &amp; Analytics capabilities using different technologies and duplicating data comes with difficulties if the following principles quoted in the TOGAF Standard [<a href="#RefC220">C220</a>] are not respected:</p>
+      <ul>
+        <li>Principle 11: Data is Shared</li>
+      <p>Users have access to the data necessary to perform their duties; therefore, data is shared across enterprise functions and organizations (…) It is less costly to maintain timely, accurate data in a single application, and then share it, than it is to maintain duplicative data in multiple applications.</p>
+      <p>For a given Organization Information System having the data kept first in an “Infocenter” and then copied in a “data warehouse” for other analytics is costly and complex.</p>
+        <li>Principle 20: Control Technical Diversity</li>
+      <p>Technological diversity is controlled to minimize the non-trivial cost of maintaining expertise in and connectivity between multiple processing environments.</p>
+      <p>For a given Organization Information System maintaining both data warehouse running on Relational Database Management System (RDBMS) and Data Lake on Hadoop<sup>®</sup> comes with IT cost and complexity that should be justified with business value.</p>
+  </ul>
+      <p>This section describes an approach to ensure that when a new technology/pattern is introduced for the BI &amp; Analytics, the replacement of the legacy architecture by the new one is performed. Replacing a capability that is paid and up-and-running in an organization is never straightforward as it requires investment that is not easy to justify from a business point of view. This approach is agnostic of the technical solutions.</p>
+      <p>The example below deals with the shift from an enterprise data warehouse running on a relational database to new generation BI &amp; Analytics data platforms that deliver the possibility to support volume x variety x velocity needs both for data storage (structured, unstructured, evens, etc.) and for data processing (file processing, <a href="#_Glossary">SQL</a>, graph processing, streams processing, machine learning, etc.).</p>
+      <p>Four Transition Architectures are described below.</p>
+      <table class="tableblock frame-all grid-all stretch">
+        <tbody><tr>
+          <td class="tableblock">
+            <p><img src="bi-analytics/bi-analytics-4.png" width="55" height="50" alt=""></p>
+            <p>Definition</p>
+          </td>
+          <td class="tableblock">
+            <p><strong>Transition Architecture</strong></p>
+            <p>A formal description of one state of architecture at an architecturally significant point in time.</p>
+            <p>Note: One or more Transition Architectures may be used to describe the progression in time from the Baseline to the Target Architecture [<a href="#RefC220">C220</a>].</p>
+            <p>A Transition Architecture is defined as a relatively stable state of the architecture that exists for a limited period of time. Operations can run normally but the Transition Architecture does not realize the full vision that is covered by the Target Architecture.</p>
+          </td>
+        </tr>
+      </tbody></table>
+      <h3>3.2.1  <a id="_Toc141274138"></a>Step 1</h3>
+      <p>Life before the new generation BI &amp; Analytics data platform – a generic “as-is” situation is described here, but the level of maturity can vary a lot depending on the organization including no existing as-is enterprise data warehouse.</p>
+      <p><img src="bi-analytics/bi-analytics-5.png" width="75%" alt=""></p>
+      <p><b>Figure 3: Step 1 – As-Is Architecture</b></p>
+      <ul>
+        <li>Transactional systems (for example, CRM, ERP, …) stand alone with their databases</li>
+        <li>Some transactional systems may include embedded BI &amp; Analytics capabilities</li>
+        <li>
+          Some transactional systems based on an <a href="#_Glossary">RDBMS</a> contribute data to a data warehouse
+        </li>
+        <li>The data warehouse is the single point of truth and is the reference database of the enterprise historical data</li>
+      <p>In some organizations, the single point of storage may not be achieved in the as-is, and the full scope of data warehouse data is covered by several systems that are more or less interconnected.</p>
+      </ul>
+      <p><b>Table 4: BI &amp; Analytics Roadmap Step 1 Details</b></p>
+      <table class="tableblock frame-all grid-all stretch">
+        <tbody><tr>
+          <td class="tableblock">
+            <p>Benefits</p>
+          </td>
+          <td class="tableblock">
+            <p>One or more reference databases for <a href="#_Glossary">RDBMS</a> historical data and a single point of truth for BI</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="tableblock">
+            <p>Missing Capabilities</p>
+          </td>
+          <td class="tableblock">
+            <p>Store raw data</p>
+            <p>Analyze non-relational data</p>
+            <p>Store analytical results datasets</p>
+            <p>Process analytics “in-database” with no impact on the quality of service</p>
+            <p>Shadow BI &amp; Analytics to gather data that is not available in the data warehouse, at least for exploration and prototyping</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="tableblock">
+            <p>Possible Triggers to Proceed to Step 2</p>
+          </td>
+          <td class="tableblock">
+            <p>Technical and/or cost limits on the volume of data processed by the <a href="#_Glossary">RDBMS</a> solutions</p>
+            <p>Technical and/or cost limits on the volume of data stored by the <a href="#_Glossary">RDBMS</a> solutions</p>
+            <p>Integration of new data in the data warehouse is too long and too expensive</p>
+            <p>New analytics business needs (variety, volume, velocity)</p>
+            <p>New requirement for an event processing application to provide recommendations based on the combination of events and historical data, like “next best customer action”, “fraud detection” …</p>
+            <p>Reduce shadow BI &amp; Analytics</p>
+          </td>
+        </tr>
+      </tbody></table>
+      <h3>3.2.2  <a id="_Toc141274139"></a>Step 2</h3>
+      <p>[Transition step] The introduction of the new generation BI &amp; Analytics data platforms.</p>
+      <p><img src="bi-analytics/bi-analytics-6.png" width="75%" alt=""></p>
+      <p><a id="_Ref132204171"></a><b>Figure  4:  Step 2 – Introduction of the New Generation Platform</b></p>
+      <ul>
+        <li>The data warehouse feeds the new generation BI &amp; Analytics data platforms with cleansed data, which they would not receive otherwise</li>
+        <li>The new generation BI &amp; Analytics data platform is used to address specific use-cases that process new data sources (e.g., applications log files, connected device)</li>
+        <li>
+          In that Transition Architecture, some data marts, like Data Mart #3 in <a href="#_Ref132204171">Figure 4</a>, that have to be delivered in short delays to the business, are fed some data from the enterprise data warehouse, and also from the new generation BI &amp; Analytics data platforms
+        </li>
+        <li>New BI &amp; Analytics use-cases can use new generation BI &amp; Analytics data platform historical data and knowledge capabilities to improve decision-making during a business process</li>
+      <p>Those applications may create new data either through a human interface or by applying an algorithm on data. This new data might integrate the new generation BI &amp; Analytics data platforms through the ingestion process to keep the history.</p>
+      </ul>
+      <p><b>Table 5: BI &amp; Analytics Roadmap Step 2 Details</b></p>
+      <table class="tableblock frame-all grid-all stretch">
+        <tbody><tr>
+          <td class="tableblock">
+            <p>Benefits</p>
+          </td>
+          <td class="tableblock">
+            <p>Analyze relational and non-relational data</p>
+            <p>Access to a Data Sand Box</p>
+            <p>New requirements for applications processing events to provide recommendations based on a combination of events and historical data like “next best customer action”, “fraud detection”…</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="tableblock">
+            <p>Missing Capabilities</p>
+          </td>
+          <td class="tableblock">
+            <p>Double storage of historical data: no single point of truth for analytics</p>
+            <p>New generation BI &amp; Analytics data platforms do not store raw data coming in from the data warehouse</p>
+            <p>Data lineage is difficult due to the loss of raw data</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="tableblock">
+            <p>Possible Triggers to Proceed to Step 3</p>
+          </td>
+          <td class="tableblock">
+            <p>Need for a single point of truth for analytics: requirement to cross all data</p>
+            <p>Technical roadmap requires technical upgrade on existing solution that can be a good opportunity to migrate to new generation BI &amp; Analytics data platforms</p>
+            <p>Agility to meet new analytic requirement or application</p>
+            <p>Requirement for data lineage</p>
+            <p>Reduce shadow BI &amp; Analytics</p>
+          </td>
+        </tr>
+      </tbody></table>
+      <h3>3.2.3  <a id="_Toc141274140"></a>Step 3</h3>
+      <p>[Transition step] The new generation BI &amp; Analytics data platforms feed the data warehouse with new data, and cover the full scope of raw data.</p>
+      <p><img src="bi-analytics/bi-analytics-7.png" width="75%" alt=""></p>
+      <p><a id="_Ref115355611"></a><a id="_Ref115355595"></a><b>Figure 5: Step 3 – The New Generation Platform Grows</b></p>
+      <ul>
+        <li>
+          Concerning data historically imported into the data warehouse, and also to the new generation BI &amp; Analytics data platforms, the preferred approach is not to feed the data warehouse with the new generation BI &amp; Analytics data platforms but for the <a href="#_Glossary">data mart</a> to go directly to Step 4 (nevertheless, this approach might be justified in some cases)
+        </li>
+        <li>
+          In that step, data marts and applications are unplugged from the enterprise data warehouse to new generation BI &amp; Analytics data platforms in an opportunistic and/or step-by-step approach, like “Data Mart #3” in <a href="#_Ref132204171">Figure 4</a>
+        </li>
+      <p>In this transition step, some may now be fed by both the new generation BI &amp; Analytics data platform and the enterprise data warehouse, like “Transactional Application #1” in <a href="#_Ref115355611">Figure 5</a></p>
+        <li>Data flows from transactional applications to the new generation BI &amp; Analytics data platforms are different from those feeding the enterprise data warehouse, as they extract:</li>
+      <ul>
+      <p style="margin-left:50px;">—&nbsp; Raw data from the transactional application</p>
+      <p style="margin-left:50px;">—&nbsp; All the metadata from the transactional application including foreign keys, data dictionary</p>
+      <p style="margin-left:50px;">Such information is rarely explicit in the flow feeding the data warehouse. Indeed, that metadata may not be required in the data warehouse as some of this information is kept in the data warehouse modeling.</p>
+      <p style="margin-left:50px;">—&nbsp; All available data on a given business object, like a customer or a contract</p>
+      <p style="margin-left:50px;">This is not limited to the scope of data required by the analytic use-case. This approach is a default one on the new generation BI &amp; Analytics data platforms, and is allowed because of the low data cost storage.</p>
+      </ul>
+        <li>The new generation BI &amp; Analytics data platforms act as the persistent raw data historical storage and information and knowledge preparation for the data warehouse replacing staging area or Operational Data Store (ODS)</li>
+        <li>The opportunity of this Transition Architecture has to be checked against going directly to Step 4</li>
+      </ul>
+      <p><b>Table 6: BI &amp; Analytics Roadmap Step 3 Details</b></p>
+      <table class="tableblock frame-all grid-all stretch">
+        <tbody><tr>
+          <td class="tableblock">
+            <p>Benefits from Previous Steps</p>
+          </td>
+          <td class="tableblock">
+            <p>Analyze relational and non-relational data</p>
+            <p>Access to a Data Sand Box</p>
+            <p>New requirement for an applications processing event to provide recommendations based on the combination of events and historical data, like “next best customer action”, “fraud detection”…</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="tableblock">
+            <p>New Benefits</p>
+          </td>
+          <td class="tableblock">
+            <p>The new generation BI &amp; Analytics data platforms store raw data, integrated data, and transformed/calculated data: all <a href="#_Glossary">data marts</a> can be plugged into the new generation BI &amp; Analytics data platforms</p>
+            <p>Data is available for data scientists in the Data Sand Box, increasing predictive capability and reducing shadow BI &amp; Analytics</p>
+            <p>Any new application requiring historical data can be built on the new generation BI &amp; Analytics data platforms: agility to meet new analytic requirements</p>
+            <p>Data lineage facilitated thanks to the storage of raw data</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="tableblock">
+            <p>Missing Capabilities</p>
+          </td>
+          <td class="tableblock">
+            <p>Double storage of historical data: no single point of truth for analytics and double cost</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="tableblock">
+            <p>Possible Triggers to Proceed to Step 4</p>
+          </td>
+          <td class="tableblock">
+            <p>Cost avoidance, optimization (storage, projects: work on data before modeling, …)</p>
+            <p>Double ingestion flow to the <a href="#_Glossary">data warehouse</a> and the new generation BI &amp; Analytics data platforms to maintain</p>
+            <p>Difficulties caused by the double storage of historical data: no single point of truth</p>
+            <p>Opportunistic approach: technical roadmap or new business requests a major upgrade on the <a href="#_Glossary">data warehouse</a> architecture</p>
+          </td>
+        </tr>
+      </tbody></table>
+      <h3>3.2.4  <a id="_Toc141274141"></a>Step 4</h3>
+      <p>[Target Architecture] The new generation BI &amp; Analytics data platforms feed all the data marts and cover all the BI &amp; Analytics requirements from business users.</p>
+      <p><img src="bi-analytics/bi-analytics-8.png" width="75%" alt=""></p>
+      <p><b>Figure 6: Step 4 – Target Architecture</b></p>
+      <p>Structurally, because of its capacity to store more volume, variety, and velocity, the new generation BI &amp; Analytics data platforms can cover the scope of the <a href="#_Glossary">data warehouse</a> data and more. The conviction was established that having two repositories, <a href="#_Glossary">data warehouse</a> and new generation BI &amp; Analytics data platforms for historical data, is not a reliable target vision. It will take time, but at the target new generation BI &amp; Analytics data platforms will cover the full scope of the <a href="#_Glossary">data warehouse</a>, including the harmonized enterprise data model built to answer analytics requirements.</p>
+      <p>Existing <a href="#_Glossary">data marts</a> are plugged into the new generation BI &amp; Analytics data platforms, which become the single point of truth for historical data storage.</p>
+      <p><b>Table 7: BI &amp; Analytics Roadmap Step 4 Details</b></p>
+      <table class="tableblock frame-all grid-all stretch">
+        <tbody><tr>
+          <td class="tableblock">
+            <p>Benefits from the Previous Steps</p>
+          </td>
+          <td class="tableblock">
+            <p>Analyze relational and non-relational data</p>
+            <p>Access to a Data Sand Box</p>
+            <p>New requirement for an applications processing event to provide recommendations based on the combination of events and historical data, like “next best customer action”, “fraud detection”…</p>
+            <p>The new generation BI &amp; Analytics data platforms store raw data, integrated data, and transformed/calculated data</p>
+            <p>Data is available for data scientists in the Data Sand Box, increasing predictive capability and reducing shadow BI &amp; Analytics</p>
+            <p>Any new application requiring historical data can be built on the new generation BI &amp; Analytics data platforms</p>
+            <p>Data lineage facilitated thanks to the storage of raw data</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="tableblock">
+            <p>New Benefits</p>
+          </td>
+          <td class="tableblock">
+            <p>No need to support maintenance on previous <a href="#_Glossary">data warehouse</a> infrastructure</p>
+            <p>New generation BI &amp; Analytics data platforms store raw data and all relevant data</p>
+            <p>New generation BI &amp; Analytics data platform is the single point of truth for historical data: reference database for historical raw data storage from which information and knowledge can be reprocessed any time, for any purpose</p>
+            <p>All data stored in a single place: in principle we should not have a situation where some relevant data is not in the new generation BI &amp; Analytics data platforms</p>
+            <p>Investments in existing <a href="#_Glossary">data marts</a> and associated tools are preserved</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="tableblock">
+            <p>Risks to Take into Account</p>
+          </td>
+          <td class="tableblock">
+            <p>There is a risk that some requirements met by the <a href="#_Glossary">data warehouse</a> architecture are not covered anymore in this step: to make that major shift possible, requirements currently covered in <a href="#_Glossary">data warehouse</a> have to be identified carefully and covered if required by the architecture based on the new generation BI &amp; Analytics data platforms</p>
+            <p>Data governance and metadata management will have to be piloted carefully in the new generation BI &amp; Analytics data platforms to be able to leverage the full value of having all relevant raw data and information stored and secured in a single place</p>
+          </td>
+        </tr>
+      </tbody></table>
+      <p>Step 4 is the proposed final target for a BI &amp; Analytics capability. Steps 2 and 3 are possible Transition Architectures, but each organization will have to define its own Transition Architecture(s) when designing the level of its roadmap.</p>
+      <p>Indeed, the journey from Step 1 to Step 4 might be quite different depending on the current state of the organization:</p>
+      <ul>
+        <li>
+          When the as-is architecture already includes an enterprise <a href="#_Glossary">data warehouse</a>, the shift from the <a href="#_Glossary">data warehouse</a> as the single point of truth for historical data storage might be longer than in an organization that has no enterprise <a href="#_Glossary">data warehouse</a>, and that will directly build the new generation BI &amp; Analytics Target Architecture
+        </li>
+        <li>Not all organizations will be able to complete the journey within three years, but within five years the new generation BI &amp; Analytics architecture should have taken a significant place in the architecture as the single point of truth for historical data storage</li>
+      </ul>
+      <table class="tableblock frame-all grid-all stretch">
+        <tbody><tr>
+          <td class="tableblock">
+            <p>Information</p>
+          </td>
+          <td class="tableblock">
+            <p>Existing systems that result from big investments and that meet business requirements with an acceptable level of service will not be replaced until a technical migration is required or a new business need emerges. The objective is to focus first on added value and to maximize the use of past investments.</p>
+          </td>
+        </tr>
+      </tbody></table>
+      <div>
+        <h1>4 <a id="Chapter5"></a><a id="_Toc49781123"></a><a id="_Ref73010492"></a><a id="_Ref73010498"></a><a id="_Ref73010503"></a><a id="_Toc110352825"></a><a id="_Ref115361950"></a><a id="_Ref119069308"></a><a id="_Toc141274142"></a>Reference Models</h1>
+      </div>
+      <h2>4.1  <a id="_Toc49781013"></a><a id="_Toc49781124"></a><a id="_Toc110352826"></a><a id="_Toc141274143"></a>BI &amp; Analytics Reference Model – Goals</h2>
+      <p><img src="bi-analytics/bi-analytics-9.png" width="90%" alt=""></p>
+      <p><b>Figure 7: Goals Targeted by Stakeholders with BI &amp; Analytics Capability</b></p>
+      <p><b>Table 8: Objectives and Goals of the BI &amp; Analytics Reference Models</b></p>
+      <table class="tableblock frame-all grid-all stretch">
+        <thead>
+          <tr>
+            <td class="tableblock">
+              <p><strong>ID</strong></p>
+            </td>
+            <td class="tableblock">
+              <p><strong>Goals</strong></p>
+            </td>
+            <td class="tableblock">
+              <p><strong>Description</strong></p>
+            </td>
+            <td class="tableblock">
+              <p><strong>Key Performance Indicators (KPIs)</strong></p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tableblock">
+              <p>1</p>
+            </td>
+            <td class="tableblock">
+              <p><a id="RANGE_B2_D13"></a>Comply with Regulations (e.g., Privacy, Solvency II, etc.)</p>
+            </td>
+            <td class="tableblock">
+              <p>Some regulations impact data management:</p>
+              <ul>
+                <li>Data privacy regulation aims to guarantee customers’ data ownership – all personal data needs to be sufficiently controlled to ensure its necessity, protection, restitution, and deletion (audits should be runnable on the system); in Europe this refers to European GDPR</li>
+                <li>Solvency II concerns the amount of capital that European Union insurance companies must hold to reduce the risk of insolvency</li>
+              </ul>
+            </td>
+            <td class="tableblock">
+              <p>↑ number of datasets tagged with the level of privacy</p>
+              <p>↓ data leakages</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>2</p>
+            </td>
+            <td class="tableblock">
+              <p>Comply with Security – data classification and encryption</p>
+            </td>
+            <td class="tableblock">
+              <p>Data is classified as secret, confidential, public, etc. depending on its sensitivity and the evaluation of associated risk. It is then encrypted with encryption keys that are managed depending on this classification.</p>
+            </td>
+            <td class="tableblock">
+              <p>↓ security breaches</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>3</p>
+            </td>
+            <td class="tableblock">
+              <p>Comply with Security – data leakage</p>
+            </td>
+            <td class="tableblock">
+              <p>Data should be protected from eavesdropping, leakage, or theft according to its classification.</p>
+            </td>
+            <td class="tableblock">
+              <p>↓ security breaches</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>4</p>
+            </td>
+            <td class="tableblock">
+              <p>Comply with Security – identity and access management</p>
+            </td>
+            <td class="tableblock">
+              <p>Management of electronic or digital identities, including the organizational policies for managing digital identity as well as the technologies needed to support identity management.</p>
+            </td>
+            <td class="tableblock">
+              <p>↓ security breaches</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>5</p>
+            </td>
+            <td class="tableblock">
+              <p>Comply with Security – infrastructure baseline</p>
+            </td>
+            <td class="tableblock">
+              <p>A minimal security baseline to be provided for the infrastructure (administrator password changes on material delivered, port management, etc.).</p>
+            </td>
+            <td class="tableblock">
+              <p>↓ security breaches</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>6</p>
+            </td>
+            <td class="tableblock">
+              <p>Data Quality is Under Control</p>
+            </td>
+            <td class="tableblock">
+              <p>Data quality should remain at a suitable level to ensure the operational performance of the organization.</p>
+            </td>
+            <td class="tableblock">
+              <p>↑ number of datasets monitored by business quality rule</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>7</p>
+            </td>
+            <td class="tableblock">
+              <p>Democratize Use of Data</p>
+            </td>
+            <td class="tableblock">
+              <p>Users should have access to shared semantics and data required to perform their duties through tools appropriate to their analytics requirements – from ready-to-read reports to advanced queries or analytics. This principle of data democratization will continually “bump up against” the principle of data security. Under no circumstances will the data sharing principle cause confidential data to be compromised.</p>
+            </td>
+            <td class="tableblock">
+              <p>↑ number of decisions taken under data inputs</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>8</p>
+            </td>
+            <td class="tableblock">
+              <p>Guarantee Quality of Service</p>
+            </td>
+            <td class="tableblock">
+              <p>Includes availability; data should be available when needed and as appropriate.</p>
+            </td>
+            <td class="tableblock">
+              <p>↑ improve system time availability</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>9</p>
+            </td>
+            <td class="tableblock">
+              <p>Improve Customer or Partner Satisfaction</p>
+            </td>
+            <td class="tableblock">
+              <p>Use-cases and services that aim to increase customer or partner satisfaction.</p>
+            </td>
+            <td class="tableblock">
+              <p>↑ improve Net Promoter Score (NPS)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>10</p>
+            </td>
+            <td class="tableblock">
+              <p>Improve Operational Efficiency</p>
+            </td>
+            <td class="tableblock">
+              <p>Use-cases and services that aim to increase agility in the organization, from innovation to operations.</p>
+            </td>
+            <td class="tableblock">
+              <p>↑ automated functions</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>11</p>
+            </td>
+            <td class="tableblock">
+              <p>Leverage Innovation Opportunities</p>
+            </td>
+            <td class="tableblock">
+              <p>The IT market is innovative. It provides opportunities to create new business models, generate revenues, or optimize.</p>
+            </td>
+            <td class="tableblock">
+              <p>↑ innovative features</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>12</p>
+            </td>
+            <td class="tableblock">
+              <p>Reduce Total Cost of Ownership</p>
+            </td>
+            <td class="tableblock">
+              <p>Increase cost efficiency.</p>
+            </td>
+            <td class="tableblock">
+              <p>↓ cost per user</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>13</p>
+            </td>
+            <td class="tableblock">
+              <p>Reduce Use-Case Time-to-Market</p>
+            </td>
+            <td class="tableblock">
+              <p>Setting up new use-cases in an Agile manner to provide competitive advantage. This includes self-service for different stakeholders.</p>
+            </td>
+            <td class="tableblock">
+              <p>↓ delay from prototype validation to production running</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>14</p>
+            </td>
+            <td class="tableblock">
+              <p>Store Data as an Asset Including Metadata</p>
+            </td>
+            <td class="tableblock">
+              <p>Valuable data owned by the organization should be kept in safe storage and with appropriate documentation, and be available, understandable, and usable (qualitative, meaningful, query-able, process-able, etc.) for transversal analytics.</p>
+            </td>
+            <td class="tableblock">
+              <p>↑ number of permanent connections</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>15</p>
+            </td>
+            <td class="tableblock">
+              <p>Generate Business Value Leveraging New Data Capabilities (e.g., Data Science)</p>
+            </td>
+            <td class="tableblock">
+              <p>New data capabilities come with the promise of creating new business value and new markets. Organizations have to be able to compete in the international market leveraging new data capabilities. CDO positions have been created to make it happen.</p>
+            </td>
+            <td class="tableblock">
+              <p>↑ value generated by data use-cases</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>16</p>
+            </td>
+            <td class="tableblock">
+              <p>Provide Interoperability Between Systems</p>
+            </td>
+            <td class="tableblock">
+              <p>Allow the break of organizational silos by ensuring application interoperability.</p>
+            </td>
+            <td class="tableblock">
+              <p>↑ number of APIs available and used</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>17</p>
+            </td>
+            <td class="tableblock">
+              <p>Support Digital and Data Innovation</p>
+            </td>
+            <td class="tableblock">
+              <p>Provide the digital capabilities to support innovation.</p>
+            </td>
+            <td class="tableblock">
+              <p>↑ innovation deployed at scale with Profit and Loss (P&amp;L) impact</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>4.2  <a id="_Ref70065435"></a><a id="_Ref70065440"></a><a id="_Toc110352827"></a><a id="_Toc141274144"></a>BI &amp; Analytics Reference Model – Detailed Business Functions</h2>
+      <p><a href="#_Ref118726963">Figure 8</a> provides detailed business functions of the BI &amp; Analytics capability.</p>
+      <p><img src="bi-analytics/bi-analytics-10.png" width="90%" alt=""></p>
+      <p><a id="_Ref118726963"></a><b>Figure  8:  BI &amp; Analytics Detailed Business Functions</b></p>
+      <h3>4.2.1  <a id="_Toc141274145"></a>Description of the Business Functions</h3>
+      <p>In the following table, <strong>bold lines are macro functions</strong> and the others are related sub-functions.</p>
+      <p><b>Table 9: Detailed Business Functions</b></p>
+      <table class="tableblock frame-all grid-all stretch">
+        <thead>
+          <tr>
+            <td class="tableblock">
+              <p><strong>Business Function</strong></p>
+            </td>
+            <td class="tableblock">
+              <p><strong>Description</strong></p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tableblock halign-center" colspan="2">
+              <p><strong>Define the Strategy &amp; Roadmaps</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Build the BI &amp; Analytics Strategy</p>
+            </td>
+            <td class="tableblock">
+              <p>Build business and IT strategy around BI &amp; Analytics, having a defined target and overall journey.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Build the Roadmap</p>
+            </td>
+            <td class="tableblock">
+              <p>Build the roadmap to implement the BI &amp; Analytics strategy.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Maintain BI &amp; Analytics Usages Backlog</p>
+            </td>
+            <td class="tableblock">
+              <p>Maintain a list of qualified business usages that are and/or should be supported by BI &amp; Analytics capabilities.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define KPIs</p>
+            </td>
+            <td class="tableblock">
+              <p>Define<a href="#_Glossary">&nbsp;KPI</a>s showing how BI &amp; Analytics reaches its strategic objectives (qualitative/quantitative).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Identify &amp; Develop Sponsorship</p>
+            </td>
+            <td class="tableblock">
+              <p>Having business and IT sponsors implicated on BI &amp; Analytics governance.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Ensure Consistency with Related Strategies (Security, Sustainability, etc.)</p>
+            </td>
+            <td class="tableblock">
+              <p>Ensure that BI &amp; Analytics ambitions and realizations are consistent with all organization policies (especially security, compliance, and digital sustainability policies).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-center" colspan="2">
+              <p><strong>Design &amp; Develop BI &amp; Analytics Value Chain</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define BI &amp; Analytics Architecture Principles and Ensure Consistency of Solutions</p>
+            </td>
+            <td class="tableblock">
+              <p>Define BI &amp; Analytics architecture principles and ensure the consistency of solutions.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Design Infrastructure &amp; Adapted Storage Spaces</p>
+            </td>
+            <td class="tableblock">
+              <p>Design the Technical Architecture for BI &amp; Analytics purposes, including the structuration of relevant storage spaces fitting various requirements and uses (cold data, hot data, sensitive data, etc.).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Model &amp; Build Data Structuration Depending on Related Uses (Raw, Warehouse, Business Views)</p>
+            </td>
+            <td class="tableblock">
+              <p>Model and implement the structuration of data to support the whole BI &amp; Analytics value chain, from raw data to business views.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define &amp; Implement Business Rules</p>
+            </td>
+            <td class="tableblock">
+              <p>Define and implement rules related to business requirements (business calculation rules, business data validity checks, etc.).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define &amp; Implement Technical Rules</p>
+            </td>
+            <td class="tableblock">
+              <p>Define and implement technical rules. Typically, it is about basic technical format rules (e.g., homogeneity of data, float (...) formats).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define &amp; Implement Specific Data Protection Rules</p>
+            </td>
+            <td class="tableblock">
+              <p>Define and implement specific data protection rules, including retention rules, compliance automation, etc.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Design &amp; Develop Data Pipelines</p>
+            </td>
+            <td class="tableblock">
+              <p>Design and develop flows from raw data to business views.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Design Semantic Layer</p>
+            </td>
+            <td class="tableblock">
+              <p>Design the semantic layer, so that data should be easily manipulated by business users; for example, for <em>ad hoc</em>/self-service reports.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Data Wrangling</p>
+            </td>
+            <td class="tableblock">
+              <p>Explore data, visualize available data for analytics purposes, build first sample machine learning models (for exploration purposes).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Design &amp; Build Advanced Analytical Models</p>
+            </td>
+            <td class="tableblock">
+              <p>Define with business what event or problem must be modelized, for what purpose, and with which operational requirements, design and build advanced analytical models to meet the requirements, and evaluate the model regarding these requirements.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Design &amp; Build Industrialized Stable Reports</p>
+            </td>
+            <td class="tableblock">
+              <p>Design and build stable recurrent reports.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Design &amp; Build A<em>d Hoc</em> Reports</p>
+            </td>
+            <td class="tableblock">
+              <p>Design and build <em>ad hoc</em> reports; for example, on a “self-service” mode – this activity is typically directly done by a business actor, final user.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Industrialize &amp; Deploy Advanced Analytical Models</p>
+            </td>
+            <td class="tableblock">
+              <p>Operationalize a validated advanced analytical model (e.g., a classification model), integrate the model in the related business process (e.g., for optimization purposes), put in place a way to monitor and control the accuracy in real life.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-center" colspan="2">
+              <p><strong>Provide Necessary Data Sources for BI &amp; Analytics Purposes</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Identify Relevant Data Sources</p>
+            </td>
+            <td class="tableblock">
+              <p>Develop practices and processes to identify quickly and precisely the relevant data sources for a given use-case, and qualify these sources.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Identify &amp; Manage Data Providers</p>
+            </td>
+            <td class="tableblock">
+              <p>Manage technical and business relationships with external data providers.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Design &amp; Build Necessary Interfaces</p>
+            </td>
+            <td class="tableblock">
+              <p>Design and build necessary data interfaces to support the BI &amp; Analytics value chain; e.g., feed raw data spaces from data sources, align operational systems with indicators calculated by BI &amp; Analytics capability, etc.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-center" colspan="2">
+              <p><strong>Govern &amp; Measure</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define Governance Organization &amp; RACI</p>
+            </td>
+            <td class="tableblock">
+              <p>Define governance organization, especially including the roles of business actors and CDO and IT teams in the build and run of the BI &amp; Analytics capability.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define &amp; Enforce Process to Onboard New Source Data</p>
+            </td>
+            <td class="tableblock">
+              <p>Define the data onboarding process: what should be done when a new data source enters the BI &amp; Analytics scope (e.g., qualification of the new source, qualification of the related data, add the new source in the metadata management repository, BI &amp; Analytics usages specifications, etc.).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define &amp; Enforce Cost Optimization Principles</p>
+            </td>
+            <td class="tableblock">
+              <p>Define how to optimize costs of the BI &amp; Analytics capability (optimization principles around organization, processes, technical platform implementation, and monitoring, etc.).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define &amp; Enforce Compliance Requirements</p>
+            </td>
+            <td class="tableblock">
+              <p>Define and enforce compliance requirements.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Measure Data Volumes</p>
+            </td>
+            <td class="tableblock">
+              <p>Be aware of the data volumes necessary for BI &amp; Analytics purposes (useful to monitor and control the costs, to encourage digital sustainability, etc.).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Measure Data Use Frequencies</p>
+            </td>
+            <td class="tableblock">
+              <p>Be aware of which data is used and which data is poorly used; it is key information to understand the value of existing data in the BI &amp; Analytics platforms.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Follow Up ROI of Usages</p>
+            </td>
+            <td class="tableblock">
+              <p>Measure the value of BI &amp; Analytics usages through Return on Investment (<a href="#_Glossary">ROI</a>) definition and calculation.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-center" colspan="2">
+              <p><strong>Protect Data &amp; Ensure Compliance</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define &amp; Manage Data Access</p>
+            </td>
+            <td class="tableblock">
+              <p>Define, manage, and control the way data can be accessed, how, and by whom.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Audit Platform Security &amp; Compliance</p>
+            </td>
+            <td class="tableblock">
+              <p>Set up a recurring audit on BI &amp; Analytics platforms, processes, security, and compliance.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define Anonymization Requirements &amp; Processes</p>
+            </td>
+            <td class="tableblock">
+              <p>Define the reasons why and how data should be anonymized/pseudonymized.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Detect &amp; Notify a Data Breach</p>
+            </td>
+            <td class="tableblock">
+              <p>Put a process in place to detect and notify a potential data breach.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Support for Handling Data Portability Requests</p>
+            </td>
+            <td class="tableblock">
+              <p>Having an organization to support the handling of data portability requests.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Define &amp; Apply a Data Quality Framework (Measures, Quality Management, etc.)</p>
+            </td>
+            <td class="tableblock">
+              <p>Apply a data quality framework for BI &amp; Analytics purposes.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Leverage Metadata Management for BI &amp; Analytics</p>
+            </td>
+            <td class="tableblock">
+              <p>Apply a metadata management capability to the BI &amp; Analytics data value chain.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-center" colspan="2">
+              <p><strong>Operate Platforms</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Detect &amp; Manage Incidents</p>
+            </td>
+            <td class="tableblock">
+              <p>Detect and manage incidents on BI &amp;Analytics platforms/tools.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Detect &amp; Manage Data Issues</p>
+            </td>
+            <td class="tableblock">
+              <p>Detect and manage data issues (data quality, data pipeline issues, etc.).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Monitor &amp; Control Costs</p>
+            </td>
+            <td class="tableblock">
+              <p>Monitor costs, especially for cloud-based solutions.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Monitor &amp; Control Data Quality</p>
+            </td>
+            <td class="tableblock">
+              <p>Monitor quality of data used for BI &amp; Analytics use-cases.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Monitor &amp; Control Model Accuracy</p>
+            </td>
+            <td class="tableblock">
+              <p>Monitor the accuracy of deployed advanced analytical models.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Schedule Data Integration &amp; Pipeline</p>
+            </td>
+            <td class="tableblock">
+              <p>Manage all scheduled tasks for BI &amp; Analytics purposes (data pipeline runs, integration, etc.).</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Grant Access</p>
+            </td>
+            <td class="tableblock">
+              <p>Handle access demands/grant access according to compliance and security policies.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock halign-center" colspan="2">
+              <p><strong>Communicate &amp; Train</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Train End Users in BI &amp; Analytics &amp; Tools</p>
+            </td>
+            <td class="tableblock">
+              <p>Organize training so that each business and data expert is comfortable in their BI &amp; Analytics practice.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Leverage Technical Evangelism</p>
+            </td>
+            <td class="tableblock">
+              <p>Encourage capitalization and the return of experiences between data experts (data scientists, data engineers, data managers, etc.).</p>
+              <p>Leverage reusable materials.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Animate BI &amp; Analytics Users &amp; Expert Communities</p>
+            </td>
+            <td class="tableblock">
+              <p>Animate user communities (on your BI &amp; Analytics platforms tools, for example), data expert communities.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Communicate on Strategy, Business, &amp; Technical Roadmaps</p>
+            </td>
+            <td class="tableblock">
+              <p>Communicate on BI &amp; Analytics strategy, value, key ongoing/finished projects, and business and technical roadmaps; communicate on the impact of BI &amp; Analytics capability for the organization.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>4.3  <a id="_Ref104902485"></a><a id="_Toc110352828"></a><a id="_Toc141274146"></a>BI &amp; Analytics Reference Model – Detailed Application Functions</h2>
+      <p><img src="bi-analytics/bi-analytics-11.png" width="90%" alt=""></p>
+      <p><b>Figure 9: BI &amp; Analytics Reference Model – Detailed Level</b></p>
+      <h3>4.3.1  <a id="_Toc141274147"></a>Description of the Application Functions</h3>
+      <p><b>Table 10: Detailed Application Functions</b></p>
+      <table class="tableblock frame-all grid-all stretch">
+        <thead>
+          <tr>
+            <td class="tableblock">
+              <p><strong>Application Function</strong></p>
+            </td>
+            <td class="tableblock">
+              <p><strong>Title</strong></p>
+            </td>
+            <td class="tableblock">
+              <p><strong>Capabilities Applicable to the<br>
+              Full Scope of BI &amp; Analytics</strong></p>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tableblock" rowspan="5">
+              <p><strong>Administration</strong></p>
+              <p>Administration tasks required to support BI &amp; Analytics capabilities such as access management, scheduling data processing, etc. Requirements listed here apply to the full scope.</p>
+            </td>
+            <td class="tableblock">
+              <p>Resources Management</p>
+            </td>
+            <td class="tableblock">
+              <p>Resources management of BI &amp; Analytics</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Access Management</p>
+            </td>
+            <td class="tableblock">
+              <p>Identity and access management, mainly including authentication and authorization services for users and administrators</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Scheduling</p>
+            </td>
+            <td class="tableblock">
+              <p>Job scheduler administration</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Service Recovery</p>
+            </td>
+            <td class="tableblock">
+              <p>Recovery of the service after a disaster</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Manage Laboratory &amp; Production Environment</p>
+            </td>
+            <td class="tableblock">
+              <p>Management of different environments: production, test, development</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock" rowspan="4">
+              <p><strong>Data Access for Engineering &amp; Data Management Use</strong></p>
+              <p>Direct access to the data of BI &amp; Analytics for advanced data stewards, data engineers, data scientists, data administrators, etc. Requirements listed here apply to the full scope.</p>
+            </td>
+            <td class="tableblock">
+              <p>Search Data Access</p>
+            </td>
+            <td class="tableblock">
+              <p>Ability to search for data through a search engine directly on BI &amp; Analytics storage</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Data Visualization</p>
+            </td>
+            <td class="tableblock">
+              <p>Ability to visualize data directly on BI &amp; Analytics storage</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>SQL Data Access</p>
+            </td>
+            <td class="tableblock">
+              <p>Ability to perform Structured Query Language (SQL) queries directly on BI &amp; Analytics storage</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Metadata Exploration</p>
+            </td>
+            <td class="tableblock">
+              <p>Ability to explore the metadata of BI &amp; Analytics</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock" rowspan="4">
+              <p><strong>Data Engineering &amp; Data Science Development</strong></p>
+              <p>Capabilities applicable to the developer’s workstation.</p>
+            </td>
+            <td class="tableblock">
+              <p>Development in Integrated Development Environment (IDE)</p>
+            </td>
+            <td class="tableblock">
+              <p>IDE for the data engineer or data scientist</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Data Wrangling &amp; Data Discovery Tools</p>
+            </td>
+            <td class="tableblock">
+              <p>Data preparation tooling for the data engineer or data scientist</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Interactive Notebook-Like Development</p>
+            </td>
+            <td class="tableblock">
+              <p>Notebook environment (for data analytics in early exploration phase, algorithm comparison) for data scientists, data engineers, and graphical presentation of data</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Statistic &amp; Machine Learning Tools</p>
+            </td>
+            <td class="tableblock">
+              <p>Statistic and machine learning tools for data scientists and data engineers</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock" rowspan="5">
+              <p><strong>Integration &amp; Deployment</strong></p>
+              <p>Continuous delivery chain, including versioning, deployment, packaging, etc.</p>
+            </td>
+            <td class="tableblock">
+              <p>Source Code Management</p>
+            </td>
+            <td class="tableblock">
+              <p>Versioning of development code (trunk) and release (branch) for developers or data scientists</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Analytical Model Management</p>
+            </td>
+            <td class="tableblock">
+              <p>Functionalities to manage life-advanced, analytical models (e.g., machine learning models) in their end-to-end lifecycle</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Testing</p>
+            </td>
+            <td class="tableblock">
+              <p>Execution of tests on the new code release (non-regression)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Build Management</p>
+            </td>
+            <td class="tableblock">
+              <p>Prepare the package to be deployed: run the test and generate binaries</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Deployment</p>
+            </td>
+            <td class="tableblock">
+              <p>Deploy a package – new software release – on a given environment (development, integration, pre-production, production)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock" rowspan="9">
+              <p><strong>Data Integration</strong></p>
+              <p>Services that allow integration and BI &amp; Analytics in the full landscape including batch, streaming, interfaces, etc. Requirements listed here apply to the full scope.</p>
+            </td>
+            <td class="tableblock">
+              <p>Metadata Exchange</p>
+            </td>
+            <td class="tableblock">
+              <p>Metadata ingestion and distribution in parallel from data</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Batch Exchange</p>
+            </td>
+            <td class="tableblock">
+              <p>Scheduled asynchronous distribution of files</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Query Execution</p>
+            </td>
+            <td class="tableblock">
+              <p>Synchronous Java<sup>®</sup> Database Connectivity (JDBC) or Open Database Connectivity (ODBC) database connection</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Manual Upload or Download</p>
+            </td>
+            <td class="tableblock">
+              <p>Integration of a file provided by an end user, or by downloading a set of data</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Data Interface</p>
+            </td>
+            <td class="tableblock">
+              <p>Web service integration, <a href="#_Glossary">API</a>s, etc.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Streaming</p>
+            </td>
+            <td class="tableblock">
+              <p>Streaming through a messaging system that transports and secures data flow back pressure</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>External Device Connection</p>
+            </td>
+            <td class="tableblock">
+              <p>Integration with an external device connection</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>In-Transit Encryption</p>
+            </td>
+            <td class="tableblock">
+              <p>Protection of data transport through the encryption of the data in motion (transit) on the network</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Interface Management</p>
+            </td>
+            <td class="tableblock">
+              <p>Capabilities applicable to full “Interface Management” scope to provide a central point to monitor and configure interfaces in a self-service mode for entities</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock" rowspan="10">
+              <p><strong>Data Processing</strong></p>
+              <p>Services that allow data transformation including basic preparations or more advanced feature calculations leveraging statistics or data science. Requirements listed here apply to the full scope.</p>
+            </td>
+            <td class="tableblock">
+              <p>Batch Processing</p>
+            </td>
+            <td class="tableblock">
+              <p>Daily, weekly, monthly, and yearly data transfers performed by batch</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Business Transformation</p>
+            </td>
+            <td class="tableblock">
+              <p>Business processing (filtering, aggregation, joining, and de-duplication)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Quality Profiling</p>
+            </td>
+            <td class="tableblock">
+              <p>Profiling of data quality through statistical techniques</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Statistical Computing</p>
+            </td>
+            <td class="tableblock">
+              <p>Data science and statistical processing (classification, clustering of data using statistics, data science modeling, including machine learning)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Deletion</p>
+            </td>
+            <td class="tableblock">
+              <p>Deletion of data from BI &amp; Analytics (e.g., for <a href="#_Glossary">GDPR</a>)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Near Realtime Processing</p>
+            </td>
+            <td class="tableblock">
+              <p>Low-latency data processing – less than 24 hours a day (includes micro-batch and near-real time, with minute or second latency)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Technical Preparation</p>
+            </td>
+            <td class="tableblock">
+              <p>Business-agnostic technical processing common to all use-cases (i.e., type format, cleansing, integration)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Masking</p>
+            </td>
+            <td class="tableblock">
+              <p>Anonymizing or pseudonymizing BI &amp; Analytics data</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Metadata Infering</p>
+            </td>
+            <td class="tableblock">
+              <p>Process of deducing properties of data – such as type, classification, metadata, etc. – through the analysis of the data itself</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Change Data Capture</p>
+            </td>
+            <td class="tableblock">
+              <p>Ingestion or distribution of change data capture flows</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock" rowspan="9">
+              <p><strong>Data Storage</strong></p>
+              <p>Services that allow persistent storage of structured or unstructured data. Requirements listed here apply to the full scope.</p>
+            </td>
+            <td class="tableblock">
+              <p>Raw Data Storage</p>
+            </td>
+            <td class="tableblock">
+              <p>Storage of source data without any change</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Stored Data Encryption</p>
+            </td>
+            <td class="tableblock">
+              <p>Protection of data within a node through encryption of the data at rest</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Metadata Storage</p>
+            </td>
+            <td class="tableblock">
+              <p>Storage of the metadata required by BI &amp; Analytics (schema)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Prepared Data Storage</p>
+            </td>
+            <td class="tableblock">
+              <p>Storage of data that has been processed applies standard technical rules that are business-agnostic: type formats, management of null value, generation of unique keys, etc.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Data Copy</p>
+            </td>
+            <td class="tableblock">
+              <p>Function that allows copying of datasets between different environments</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Data Versioning</p>
+            </td>
+            <td class="tableblock">
+              <p>Functions available to facilitate the versioning of data collections</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Information Data Storage</p>
+            </td>
+            <td class="tableblock">
+              <p>Storage of data that has been prepared for a specific business use-case: insights, features calculated by data science, aggregations, includes the capability to execute low-latency queries for streaming jobs</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Sensitive Data Storage</p>
+            </td>
+            <td class="tableblock">
+              <p>Storage of sensitive data; e.g., personal, financial, strategy, business, etc.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Archiving &amp; Compressing</p>
+            </td>
+            <td class="tableblock">
+              <p>Archiving and compression functions to manage the data lifecycle and optimize storage resources</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock" rowspan="3">
+              <p><strong>Decision Support Analysis and Visualization</strong></p>
+              <p>Support data discovery and visualization using data stored in BI &amp; Analytics.</p>
+            </td>
+            <td class="tableblock">
+              <p>Visual Data Discovery</p>
+            </td>
+            <td class="tableblock">
+              <p>Dynamic drill down to navigate the data and find the right chart, graphic, etc.</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Statistical Analysis</p>
+            </td>
+            <td class="tableblock">
+              <p>Apply dynamic statistical “off-the-shelf” models to information available online</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Dynamic Data Preparation</p>
+            </td>
+            <td class="tableblock">
+              <p>Data dynamic preparation, with no persistence, to allow statistical processing</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock" rowspan="5">
+              <p><strong>Information Reporting &amp; Dashboarding</strong></p>
+              <p>Support reporting and dashboarding activities using data stored in BI &amp; Analytics.</p>
+            </td>
+            <td class="tableblock">
+              <p>Information Servicing</p>
+            </td>
+            <td class="tableblock">
+              <p>Storage of information data in a format adapted to queries (cube, in memory, view, etc.)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Formatted Online Reporting</p>
+            </td>
+            <td class="tableblock">
+              <p>Ready-to-use reports and charts that can be refreshed interactively to use data with no specific data management skills</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Report Authoring</p>
+            </td>
+            <td class="tableblock">
+              <p>Build reports and refresh them with data, with the ability for a business user – with no SQL skill, and a drag-and-drop User Interface (UI) – to create a report from available information and share it with other users</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Report Diffusion Scheduling</p>
+            </td>
+            <td class="tableblock">
+              <p>Ready-to-use static reports, charts generated periodically, usually paginated and in a printable format</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Basic Data Tables Manipulation &amp; Analysis</p>
+            </td>
+            <td class="tableblock">
+              <p>Functionalities to facilitate the most basic and frequent manipulation, treatment, and analysis of data tables</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock" rowspan="5">
+              <p><strong>Monitoring</strong></p>
+              <p>Monitoring services for infrastructure, network, and application to guarantee the agreed service level.</p>
+            </td>
+            <td class="tableblock">
+              <p>Technical Monitoring</p>
+            </td>
+            <td class="tableblock">
+              <p>Monitoring of the network layer and infrastructure layer</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Business Usage Monitoring</p>
+            </td>
+            <td class="tableblock">
+              <p>Monitoring of the business services of the platform (supervise data science model drifting, etc.)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Security Monitoring</p>
+            </td>
+            <td class="tableblock">
+              <p>Monitoring of the security layer</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Data &amp; Application Monitoring</p>
+            </td>
+            <td class="tableblock">
+              <p>Monitoring of the data (e.g., quality) and application layer (e.g., availability of services)</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableblock">
+              <p>Lineage &amp; Audit</p>
+            </td>
+            <td class="tableblock">
+              <p>Capture of the data lifecycle, including the data origin and where it moves over time</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>4.4  <a id="_Toc110352829"></a><a id="_Toc141274148"></a>BI &amp; Analytics Reference Model – Requirements</h2>
+      <p>To complement this document, a spreadsheet file with an example requirements list for a BI &amp; Analytics capability is provided.</p>
+      <p>The architecture requirements listed in this file give some details about the application functions that are described in the reference architecture.</p>
+      <p>It should probably not be read as a whole, but can be a reference to find details on some functions.</p>
+      <table class="tableblock frame-all grid-all stretch">
+        <tbody><tr>
+          <td class="tableblock">
+            <p><strong>Architecture Requirements</strong></p>
+            <p>The Enterprise Architecture systemic approach is applied here. The whole scope of work is a system composed of subsystems. Each function constitutes a subsystem. Thereby, the requirement wording “the system” refers to the function of the requirement.</p>
+            <p>They are provided in the spreadsheet file by the functions listed and here, in this chapter, they are provided in alphabetical order.</p>
+            <p>The architecture requirements represent formal statements of need, as expressed by stakeholders, which must be met by the architecture.</p>
+            <p>Architecture requirements capture what is architecturally significant or, in other words, they should capture what has an impact on the architecture decisions. They should not be as detailed as specification or test requirements, but can be an input to writing them.</p>
+            <p>By formal statements we mean:</p>
+            <ul>
+              <li>Explicit and understandable need</li>
+              <li>Not solution-oriented, no tooling name</li>
+              <li>Atomic</li>
+              <li>Unique</li>
+              <li>Verifiable</li>
+            </ul>
+            <p>The architecture requirements are synthetic but detailed enough to allow:</p>
+            <ul>
+              <li>Clear understanding of the capabilities needed and delivered</li>
+              <li>Roadmap prioritization</li>
+            <p>—&nbsp;&nbsp;&nbsp;&nbsp; Securing of the implementation of the BI &amp; Analytics platform</p>
+              <li>Architecture decisions</li>
+              <li>Precise understanding of the capabilities provided by IT suppliers</li>
+            </ul>
+            <p>The formalization of requirements uses the following structure: “The system should [verb][object][stakeholder]”.</p>
+          </td>
+        </tr>
+      </tbody></table>
+      <h2>Glossary</h2>
+  <table style="border:none;">
+  <tbody><tr>
+      <td width="15%" style="vertical-align:top;">ADM</td><td>Architecture Development Method
+  </td></tr><tr>
+      <td style="vertical-align:top;">API</td><td style="vertical-align:top;">Application Programming Interface
+     </td></tr><tr><td style="vertical-align:top;"></td><td style="vertical-align:top;"> Simplify software and integration architecture developments by enabling applications to exchange data and functionalities easily through structured interfaces.
+      </td></tr><tr><td style="vertical-align:top;">ASF</td><td style="vertical-align:top;">Apache Software Foundation
+      </td></tr><tr><td style="vertical-align:top;">BI</td><td style="vertical-align:top;">Business Intelligence
+      </td></tr><tr><td style="vertical-align:top;">CDO</td><td style="vertical-align:top;">Chief Data Officer
+      </td></tr><tr><td style="vertical-align:top;"></td><td style="vertical-align:top;">Key role in organization responsible for measuring and increasing value of data in the organization through data management, data architecture, data governance, analytics use-cases, etc.
+      </td></tr><tr><td style="vertical-align:top;">CRM</td><td style="vertical-align:top;">Customer Relationship Management
+      </td></tr><tr><td style="vertical-align:top;">Data Mart</td><td style="vertical-align:top;">A structure/access pattern specific to data warehouse environments, used to retrieve client-facing data. 
+  A subset of the data warehouse and is usually oriented to a specific business line or team. Whereas data warehouses have an enterprise-wide depth, the information in data marts pertains to a single department. Doing so, it decouples the different business BI &amp; Analytics solutions and allows step-by-step upgrade.
+      </td></tr><tr><td style="vertical-align:top;">Enterprise Data Warehouse<br>
+  </td><td style="vertical-align:top;">
+      A subject-oriented, integrated, time-variant, non-volatile collection of data in support of management’s decision-making process [<a href="#RefInmon1995">Inmon 1995</a>].
+      </td></tr><tr><td style="vertical-align:top;">ERP</td><td style="vertical-align:top;">Enterprise Resource Planning
+      </td></tr><tr><td style="vertical-align:top;">ETL</td><td style="vertical-align:top;">Extract, Transform, Load
+      </td></tr><tr><td style="vertical-align:top;"></td><td style="vertical-align:top;">Usually names the data integration process that combines data from one or multiple sources into a single, consistent data store. Also refers to a certain type of solutions supporting this process.
+      </td></tr><tr><td style="vertical-align:top;">GDPR</td><td style="vertical-align:top;">General Data Protection Regulation
+      </td></tr><tr><td style="vertical-align:top;"></td><td style="vertical-align:top;">Regulation that harmonizes data privacy laws across Europe.
+      </td></tr><tr><td style="vertical-align:top;">IDE</td><td style="vertical-align:top;">Integrated Development Environment
+      </td></tr><tr><td style="vertical-align:top;"></td><td style="vertical-align:top;">Software suite that consolidates basic tools required to write and test software.
+      </td></tr><tr><td style="vertical-align:top;">Infocenter</td><td style="vertical-align:top;">The first generation of BI &amp; Analytics capabilities set up in the 1970s and 1980s. A raw copy of the mainframe operational systems data was made available for analytics by business users. It was then replaced by data warehouses, but they are still used and in place in some organizations.
+      </td></tr><tr><td style="vertical-align:top;">JDBC</td><td style="vertical-align:top;">Java Database Connectivity
+      </td></tr><tr><td style="vertical-align:top;">KPI</td><td style="vertical-align:top;">Key Performance Indicator
+      </td></tr><tr><td style="vertical-align:top;">NPS</td><td style="vertical-align:top;">Net Promoter Score
+      </td></tr><tr><td style="vertical-align:top;">ODBC</td><td style="vertical-align:top;">Open Database Connectivity
+      </td></tr><tr><td style="vertical-align:top;">ODS</td><td style="vertical-align:top;">Operational Data Store
+      </td></tr><tr><td style="vertical-align:top;"></td><td style="vertical-align:top;">A database designed to integrate data from multiple sources for additional operations on the data. Unlike a master data store, the data is not passed back to operational systems. It may be passed for further operations and to the data warehouse for reporting. Because the data originates from multiple sources, the integration often involves cleaning, resolving redundancy, and checking against business rules for integrity. It is usually designed to contain low-level or atomic (indivisible) data (such as transactions and prices) with limited history that is captured in “real time” or “near-real time” as opposed to the much greater volumes of data stored in the data warehouse generally on a less-frequent basis. The general purpose is to integrate data from disparate source systems in a single structure, using data integration technologies like data virtualization, data federation, or ETL. This will allow operational access to the data for operational reporting, master data, or reference data management. It is not a replacement or substitute for a data warehouse, but can be a source.
+      </td></tr><tr><td style="vertical-align:top;">P&amp;L</td><td style="vertical-align:top;">Profit and Loss
+      </td></tr><tr><td style="vertical-align:top;">RACI</td><td style="vertical-align:top;">Responsible, Accountable, Consulted, Informed
+      </td></tr><tr><td style="vertical-align:top;">RDBMS</td><td style="vertical-align:top;">Relational Database Management System
+      </td></tr><tr><td style="vertical-align:top;">ROI</td><td style="vertical-align:top;">Return on Investment
+      </td></tr><tr><td style="vertical-align:top;">SQL</td><td style="vertical-align:top;">Structured Query Language
+      </td></tr><tr><td style="vertical-align:top;"></td><td style="vertical-align:top;">A standardized programming language that is used to manage relational databases and perform various operations on the data in them.
+      </td></tr><tr><td style="vertical-align:top;">Staging Area or Landing Zone
+      </td><td style="vertical-align:top;">An intermediate storage area used for data processing during the ETL process. The data staging area sits between the data source(s) and the data target(s), which are often data warehouses, data marts, data lakes, or other data repositories. Data staging areas are often transient in nature, with their contents being erased prior to running an ETL process or immediately following successful completion of an ETL process.
+      </td></tr><tr><td style="vertical-align:top;">TCO</td><td style="vertical-align:top;">Total Cost of Ownership
+      </td></tr><tr><td style="vertical-align:top;">UI</td><td style="vertical-align:top;">User Interface
+  
+  </td></tr></tbody></table>
+      </div><br>
+  </div>
+  </div>
+  <div class="copyright"> 
+  <center>Copyright © 2023 The Open Group, All Rights Reserved.<br> 
+   TOGAF® is a registered trademark of The Open Group</center> 
+  </div> 
+  
+  
+  </body></html>

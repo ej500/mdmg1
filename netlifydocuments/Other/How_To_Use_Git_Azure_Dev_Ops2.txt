@@ -1,0 +1,94 @@
+Innstall 
+Verify if it is innstalled  in cmd
+git --version
+
+Practise Git  (Learn by hart ) 
+
+---- configure visual studio with this setup 
+     --- see C:\Users\JKJLJLJLJLJJL\Pictures\
+
+
+1. Open vs...Go to git menu on top and select manage branches or go to git menu on the left if window is setup as on
+     C:\Users\SASASASASA\Pictures\Visual_Studio_2.JPG   
+2. chose Manage Branches
+3. In the bottom right chose master -- 
+   3.1 also pick master in the Manage Brancs Window in the left window
+   3.2 Hit Fetch (this gives an oveview of what is not in synch with remote master)
+   3.3 Pull to local master (if new items are found and verified ok )  
+5. (Go to Bottom Right dropdown) Create New Branch 
+   5.1 In popoup window
+	5.1.2 In "Branch Name" text box---  name it as similar as this sample text "User/egil/Learn3"  
+   	5.1.2 In "Based" on dropdown select  Master 
+   	5.1.3 in Checbox tick the Checkout Branch
+        5.1.4 Click create 
+7.  In VS Select the branch name you created in in 5.1.1 from dropdown bottom right
+    7.1 In the Manage Branch window hit branch you just created  
+    7.2  Go to the VS solution explorer tab: 
+    7.1. Make a change: For instance add a table 
+    7.2  Save All
+8.In VS Select the branch name you created in in 5.1.1 from dropdown bottom right
+    8.1 In the Manage Branch window hit branch you just created 
+    8.2 Go to The Git Changes Tab (mid left) or find it from Main menu-  Git - Manage Branches 
+  	 8.2.1  Enter Text in the commit text box
+         8.2.2  Hit commit all option
+     	 8.1.2  Notice that 1 additional item is added as a outgoing item above the commit text Box  
+10. Go to to manage branch window and select (hit with mouse) the name of the  branch it was comitted to
+    10.1.1  Verify that the comment created in the commit text box is added as an outgoing item for this branch 
+    10.1.2  Hit "Push" Outgoing branch to Origin (from mid tab)
+    10.2.1  Hit the "Create a Pull Request" url in blue in the popup above the  "manage branch" window tab (this to create a pull request 
+            in azuredevops) 
+    10.2.2  In the internet browser window for azure devop that pop up,  Give the pull request a name ,and hit "create" in the next window  approve and complete the merge 
+11.1.1  In VS Select master from dropdown (bottom right) 
+	 11.2.1  go to Manage Branches Tab 
+         11.2.2  Select master in the Manage Branch Window 
+	 11.2.3  Hit Fetch 
+         11.2.4  Hit Pull to add the approved (completed) pull request to local master 
+		 !(make sure to be on the master in locals... the bottom right)
+12.  In VS Select master from dropdown bottom right 
+	- Go to Solution explorer tab and verify that the change have been added  to the local resp for master 
+13.  Delete the Branch you just created in the ("Manage Branches" window to the left ) this to keeep it clean
+
+--Start all over again or go to  the next step (14) to deploy     
+
+14. To publish/ delpoy go to database folder and  "tools" subfolder folder 
+	14.1  In VS Select the branch name you created in in 5.1.1 from dropdown bottom right 
+	14.2 Select sub "Deploy" folder and double click the name of the environment you need to update.
+	14.2.1 and double click the environment you want to publish to in order to trigger the "generate script" popup
+	14.2.1.1  In the "generate script" popoup  Ensure that the Variable's have assoiated vaules (databases) in order to ensure that 
+                  the generate script button is faded in.
+        14.2.1.1.1 Hit the generate script button
+        14.2.1.1.2 Mark the script with ctrl+ a and execute the script ctrl+shift+e  to publish the script 
+                    ( if a db do not exists create it manually in SSMS)   
+
+
+     06:11
+
+ -- For post deploy script , before build , go to SQL which should be available between Team and Analyse 
+--- you may have to kill some users  i.e tools..sp_whoisactive or sp_who2 find the spid nr and kill 69
+---   
+
+
+--- How to rebase 
+--- Check out of your branch ( Double click it) 
+--- Fetch data to see incomming
+--- Pull to master
+--- Check out of your branch
+--- click on your   branch on the left pane  , right click and  rebase to master.
+--- than you will see that your branch and master both is marked red in the local history pane 
+--- 
+   
+
+
+ 
+
+ 
+  
+
+ 
+
+ 
+
+
+
+
+  
