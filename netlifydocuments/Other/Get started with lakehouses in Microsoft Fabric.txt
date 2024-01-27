@@ -1,0 +1,65 @@
+Get started with lakehouses in Microsoft Fabric
+
+Lakehouses merge data lake storage flexibility with data warehouse analytics. Microsoft Fabric offers a lakehouse solution for comprehensive analytics on a single SaaS platform.
+
+Learning objectives
+In this module, you'll learn how to:
+
+Describe core features and capabilities of lakehouses in Microsoft Fabric
+Create a lakehouse
+Ingest data into files and tables in a lakehouse
+Query lakehouse tables with SQL
+
+The foundation of Microsoft Fabric is a Lakehouse, which is built on top of the OneLake scalable storage layer and uses Apache Spark and SQL compute engines for big data processing. A Lakehouse is a unified platform that combines:
+
+The flexible and scalable storage of a data lake
+The ability to query and analyze data of a data warehouse
+Imagine your company has been using a data warehouse to store structured data from its transactional systems, such as order history, inventory levels, and customer information. You have also collected unstructured data from social media, website logs, and third-party sources that are difficult to manage and analyze using the existing data warehouse infrastructure. Your company's new directive is to improve its decision-making capabilities by analyzing data in various formats across multiple sources, so the company chooses Microsoft Fabric.
+
+In this module, we explore how a lakehouse in Microsoft Fabric can help address scenarios like this by providing a scalable and flexible data store for files and tables that you can query using SQL.
+
+Explore the Microsoft Fabric Lakehouse
+Completed
+100 XP
+5 minutes
+A Lakehouse presents as a database and is built on top of a data lake using Delta format tables. Lakehouses combine the SQL-based analytical capabilities of a relational data warehouse and the flexibility and scalability of a data lake. Lakehouses store all data formats and can be used with various analytics tools and programming languages. As cloud-based solutions, lakehouses can scale automatically and provide high availability and disaster recovery.
+
+Some benefits of a lakehouse include:
+
+Lakehouses use Spark and SQL engines to process large-scale data and support machine learning or predictive modeling analytics.
+Lakehouse data is organized in a schema-on-read format, which means you define the schema as needed rather than having a predefined schema.
+Lakehouses support ACID (Atomicity, Consistency, Isolation, Durability) transactions through Delta Lake formatted tables for data consistency and integrity.
+Lakehouses are a single location for data engineers, data scientists, and data analysts to access and use data.
+A Lakehouse is a great option if you want a scalable analytics solution that maintains data consistency. It's important to evaluate your specific requirements to determine which solution is the best fit.
+
+Microsoft Fabric lakehouses
+In Microsoft Fabric, you can create a lakehouse in any premium tier workspace. After creating a lakehouse, you can load data - in any common format - from various sources; including local files, databases, or APIs. Data ingestion can also be automated using Data Factory Pipelines or Dataflows (Gen2) in Microsoft Fabric. Additionally, you can create Fabric shortcuts to data in external sources, such as Azure Data Lake Store Gen2 or a Microsoft OneLake location outside of the lakehouse's own storage. The Lakehouse Explorer enables you to browse files, folders, shortcuts, and tables; and view their contents within the Fabric platform.
+
+After you've ingested the data into the Lakehouse, you can use Notebooks or Dataflows (Gen2) to explore and transform it.
+
+ Note
+
+Dataflows (Gen2) are based on Power Query - a familiar tool to data analysts using Excel or Power BI that provides visual representation of transformations as an alternative to traditional programming.
+
+Data Factory Pipelines can be used to orchestrate Spark, Dataflow, and other activities; enabling you to implement complex data transformation processes.
+
+After transforming your data, you can query it using SQL, use it to train machine learning models, perform real-time analytics, or develop reports in Power BI.
+
+You can also apply data governance policies to your Lakehouse, such as data classification and access control.
+
+
+Work with Microsoft Fabric Lakehouses
+Now that you understand the core capabilities of a Microsoft Fabric Lakehouse, let's explore how to work with one.
+
+Create and explore a lakehouse
+You create and configure a new Lakehouse in the Data Engineering workload. Each lakehouse produces three named items in the Fabric-enabled workspace:
+
+Lakehouse is the lakehouse storage and metadata, where you interact with files, folders, and table data.
+Semantic model (default) is an automatically created data model based on the tables in the lakehouse. Power BI reports can be built from the semantic model.
+SQL Endpoint is a read-only SQL endpoint through which you can connect and query data with Transact-SQL.
+
+
+You can work with the data in the lakehouse in two modes:
+
+Lakehouse enables you to add and interact with tables, files, and folders in the Lakehouse.
+SQL Endpoint enables you to use SQL to query the tables in the lakehouse and manage its relational data model.
